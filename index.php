@@ -13,6 +13,7 @@ and open the template in the editor.
         <?php
         echo "Server IP: ".$_SERVER['SERVER_ADDR']." <br/> ".
              "Portnumber: ".$_SERVER['SERVER_PORT'];
+        echo "<br/> Cron test";
         ?>
     </body>
 </html>
