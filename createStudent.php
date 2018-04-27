@@ -1,6 +1,6 @@
 <?php
 
-$servername = "10.10.2.5";
+$servername = "maxscalehost";
 $username = "maxscaleuser";
 $password = "maxscalepass";
 $dbname = "studentinfo";
