@@ -13,7 +13,6 @@
           if ($db->connect_error) {
              die(“Connection failed: ” . $db->connect_error);
           }
-          else{
             if(isset($_POST["retrieve"])){
                 $sql1 = "SELECT * FROM students";
                 $resultat = $db->query($sql1);
@@ -33,9 +32,7 @@
                     echo $email . "<br>";
                     echo $studentprogram . "<br>";
                   
-                    echo "testingAntallrader?";
-                }
-                    
+                    echo "testingAntallrader?";                    
                 }
             }
         ?>
