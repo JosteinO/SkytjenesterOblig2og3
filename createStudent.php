@@ -1,13 +1,12 @@
 <?php
 
 $servername = "10.10.2.5";
-$username = "maxscaleuser";
-$password = "maxscalepass";
+$username = "maxscaleuser@maxscalehost";
+$password = "*E7ACDE28142BFC311A2CE191B3CB3E510A27EB60";
 $dbname = "studentinfo";
-$port = "3306";
 
 // Create connection
-$db = new mysqli($servername, $username, $password, $dbname, $port);
+$db = new mysqli($servername, $username, $password, $dbname);
 
 // Check connection
 if ($db->connect_error) {
