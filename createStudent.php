@@ -1,7 +1,7 @@
 <?php
 
 $servername = "10.10.2.5";
-$username = "";
+$username = "dats20";
 $password = "cent soldier thick";
 $dbname = "studentinfo";
 
@@ -11,6 +11,7 @@ $db = new mysqli($servername, $username, $password, $dbname);
 // Check connection
 if ($db->connect_error) {
     die("Connection failed: " . $db->connect_error);
+    echo $db->host_info;
 } 
 
 if (isset($_REQUEST["createStudent"])) { 
