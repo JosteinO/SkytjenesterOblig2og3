@@ -6,20 +6,20 @@
   
   <body>
       <?php
-        //$db = mysqli_connect("10.10.2.5", "maxscaleuser", "passord", "studentinfo");
-        //$info = array();
+        $db = mysqli_connect("10.10.2.5", "maxscaleuser", "passord", "studentinfo");
+        $info = array();
       ?>
     <form method="post">
         <input type="submit" name="retrieve" value="Retrieve all the data!"></input><br>
         <?php
             if(isset($_POST["retrieve"])){
-                /*$sql1 = "SELECT * FROM students";
+                $sql1 = "SELECT * FROM students";
                 $resultat = $db->query($sql1);
-                $antall_rader = $db->affected_rows;*/
+                $antall_rader = $db->affected_rows;
               
                 echo "Knappe er trykket test";
 
-                /*for ($i = 0; $i < $antall_rader; $i++) {
+                for ($i = 0; $i < $antall_rader; $i++) {
                     $rad = $resultat->fetch_object();
 
                     $studentid = $rad->studentid;
@@ -33,7 +33,7 @@
                   
                     echo "testingAntallrader?";
                     
-                }*/
+                }
             }
         ?>
     </form>
