@@ -1,7 +1,7 @@
 <?php
 
 $servername = "10.10.2.5";
-$username = "maxscaleuser@maxscalehost";
+$username = "maxscaleuser";
 $password = "maxscalepass";
 $dbname = "studentinfo";
 
