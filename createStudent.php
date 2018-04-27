@@ -1,8 +1,8 @@
 <?php
 
 $servername = "10.10.2.5";
-$username = "maxscaleuser";
-$password = "maxscalepass";
+$username = "dats20";
+$password = "cent soldier thick";
 $dbname = "studentinfo";
 
 // Create connection
