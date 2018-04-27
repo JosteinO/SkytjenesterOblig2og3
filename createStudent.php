@@ -1,6 +1,6 @@
 <?php
 
-$servername = "maxscalehost";
+$servername = "dats20-dbproxy";
 $username = "maxscaleuser";
 $password = "maxscalepass";
 $dbname = "studentinfo";
