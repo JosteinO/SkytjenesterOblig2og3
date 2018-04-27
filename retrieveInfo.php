@@ -13,8 +13,6 @@
        "Portnumber: ".$_SERVER['SERVER_PORT'];
       ?>
     </footer>
-</body>
-</html>
 <?php
           $db = mysqli_connect("10.10.2.5", "maxscaleuser", "maxscalepass", "studentinfo");
           $info = array();
@@ -46,3 +44,5 @@
                 }
             }
         ?>
+ </body>
+</html>
