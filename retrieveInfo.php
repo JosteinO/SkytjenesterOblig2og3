@@ -1,5 +1,5 @@
  <?php
-          $db = mysqli_connect("10.10.2.5", "maxscaleuser", "maxscalepass", "studentinfo");
+          $db = mysqli_connect("dats20-dbproxy", "maxscaleuser", "maxscalepass", "studentinfo");
           $info = array();
          /* if ($db->connect_error) {
              die(“Connection failed: ” . $db->connect_error);
