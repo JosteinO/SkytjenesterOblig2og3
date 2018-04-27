@@ -10,7 +10,7 @@
     <footer>
       <?php
        echo "Server IP: ".$_SERVER['SERVER_ADDR']." <br/> ".
-       "Portnumber: ".$_SERVER['SERVER_PORT'];
+       "Portnumber: ".$_SERVER['SERVER_PORT']."<br>";
       ?>
     </footer>
 <?php
@@ -26,7 +26,7 @@
                 $resultat = $db->query($sql1);
                 $antall_rader = $db->affected_rows;
               
-                echo "Knappen er trykket test";
+                echo "Knappen er trykket test <br>";
 
                 for ($i = 0; $i < $antall_rader; $i++) {
                     $rad = $resultat->fetch_object();
