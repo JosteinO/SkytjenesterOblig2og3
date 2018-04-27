@@ -36,7 +36,7 @@
  </head>
    <body>
     <form method="post">
-      <input type="submit" name="retrieve" value="Retrieve all the data!"></input><br>
+      <input type="button" name="retrieve" value="Retrieve all the data!"></input><br>
     </form>
     <footer>
      <?php
