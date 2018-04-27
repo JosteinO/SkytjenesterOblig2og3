@@ -1,3 +1,26 @@
+<?php
+$db = mysqli_connect("10.10.2.5", "dats20", "passord", "studentinfo");
+
+if (isset($_REQUEST["createStudent"])) { 
+$studentID = $_REQUEST["studentid"];
+$name = $_REQUEST["name"];
+$email = $_REQUEST["email"];
+$studyprog = $_REQUEST["studyprogram"];
+  
+$sql = "INSERT INTO studentinfo.students (studentid, name, email, study_program) VALUES"
+            . "('$studentID', '$name', '$email', '$studyprog')";
+
+      $result = $db->query($sql);
+  
+  if ($result) {
+    } else {
+        echo "Error in DB: <br>" . $db->error;
+    }
+  
+    $db->close();
+}
+?>
+
 <!doctype html>
 <html lang="no">
   <head>
@@ -7,7 +30,7 @@
   </head>
   <body>
   
- <form action="../doCreate.php" method="POST">
+ <form action="" method="POST">
   <fieldset>
     <legend>Student information:</legend>
     StudentID:<br>
@@ -18,7 +41,7 @@
     <input type="text" name="email" placeholder="Enter your email"><br>
     Study program:<br>
     <input type="text" name="studyprogram" placeholder="Enter your study program"><br><br>
-    <input type="submit" value="Submit">
+    <input type="submit" name="createStudent" value="Submit">
   </fieldset>
 </form>
 
