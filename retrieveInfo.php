@@ -28,6 +28,8 @@
                     echo $name . "<br>";
                     echo $email . "<br>";
                     echo $studentprogram . "<br>";
+                  
+                    echo "testing123";
                     
                 }
             }
