@@ -1,5 +1,6 @@
 <?php
 
+if (isset($_REQUEST["createStudent"])) { 
 $servername = "localhost";
 $username = "root";
 $password = "passord";
@@ -11,10 +12,8 @@ $db = new mysqli($servername, $username, $password, $dbname);
 // Check connection
 if ($db->connect_error) {
     die("Connection failed: " . $db->connect_error);
-    echo $db->host_info;
-} 
-
-if (isset($_REQUEST["createStudent"])) { 
+}     
+    
 $studentID = $_REQUEST["studentid"];
 $name = $_REQUEST["name"];
 $email = $_REQUEST["email"];
