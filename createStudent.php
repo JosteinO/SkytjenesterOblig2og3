@@ -1,8 +1,8 @@
 <?php
 
-$servername = "dats20-dbproxy";
-$username = "maxscaleuser";
-$password = "maxscalepass";
+$servername = "localhost";
+$username = "root";
+$password = "passord";
 $dbname = "studentinfo";
 
 // Create connection
