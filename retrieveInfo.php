@@ -34,7 +34,7 @@
    <title>Retrieve Info</title>
  </head>
    <body>
-    <form action="" method="post">
+    <form method="post">
       <input type="submit" name="retrieve" value="Retrieve all the data!"></input><br>
     </form>
     <footer>
