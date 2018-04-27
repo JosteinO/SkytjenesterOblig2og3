@@ -1,5 +1,17 @@
 <?php
-$db = mysqli_connect("10.10.3.99", "root", "passord", "studentinfo");
+
+$servername = "10.10.2.5";
+$username = "maxscaleuser";
+$password = "maxscalepass";
+$db = "studentinfo";
+
+// Create connection
+$db = new mysqli($servername, $username, $password, $db);
+
+// Check connection
+if ($db->connect_error) {
+    die("Connection failed: " . $db->connect_error);
+} 
 
 if (isset($_REQUEST["createStudent"])) { 
 $studentID = $_REQUEST["studentid"];
@@ -13,6 +25,8 @@ $sql = "INSERT INTO studentinfo.students (studentid, name, email, study_program)
       $result = $db->query($sql);
   
   if ($result) {
+      header("Location: /createStudent.php");
+      exit;
     } else {
         echo "Error in DB: <br>" . $db->error;
     }
