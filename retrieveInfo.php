@@ -12,7 +12,7 @@
               
                 echo "Knappen er trykket test";
 
-                for ($i = 0; $i < $antall_rader; $i++) {
+                /*for ($i = 0; $i < $antall_rader; $i++) {
                     $rad = $resultat->fetch_object();
 
                     $studentid = $rad->studentid;
@@ -26,7 +26,7 @@
                   
                     echo "testingAntallrader?";    
                  
-                }
+                }*/
             }
 ?>
 <!DOCTYPE html>
@@ -36,7 +36,7 @@
  </head>
    <body>
     <form method="post">
-      <input type="button" name="retrieve" value="Retrieve all the data!"></input><br>
+      <input type="submit" name="retrieve" value="Retrieve all the data!"></input><br>
     </form>
     <footer>
      <?php
