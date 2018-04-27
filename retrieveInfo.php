@@ -6,7 +6,7 @@
   
   <body>
       <?php
-        $db = mysqli_connect("10.10.2.5", "root", "passord", "studentinfo");
+        $db = mysqli_connect("10.10.2.5", "maxscaleuser", "passord", "studentinfo");
         $info = array();
       ?>
     <form method="post">
