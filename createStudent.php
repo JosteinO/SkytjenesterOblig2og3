@@ -1,5 +1,5 @@
 <?php
-$db = mysqli_connect("10.10.2.5", "dats20", "passord", "studentinfo");
+$db = mysqli_connect("10.10.2.5", "maxscaleuser", "maxscalepass", "studentinfo");
 
 if (isset($_REQUEST["createStudent"])) { 
 $studentID = $_REQUEST["studentid"];
