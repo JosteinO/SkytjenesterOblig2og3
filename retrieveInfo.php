@@ -1,34 +1,3 @@
-<?php
-          $db = mysqli_connect("10.10.2.5", "maxscaleuser", "maxscalepass", "studentinfo");
-          $info = array();
-         /* if ($db->connect_error) {
-             die(“Connection failed: ” . $db->connect_error);
-          }*/
-?>
-        <?php
-            if(isset($_POST["retrieve"])){
-                $sql1 = "SELECT * FROM students";
-                $resultat = $db->query($sql1);
-                $antall_rader = $db->affected_rows;
-              
-                echo "Knappe er trykket test";
-
-                for ($i = 0; $i < $antall_rader; $i++) {
-                    $rad = $resultat->fetch_object();
-
-                    $studentid = $rad->studentid;
-                    $name = $rad->name;
-                    $email = $rad->email;
-                    $studentprogram = $rad->study_program;
-                    echo $studentid . "<br>";
-                    echo $name . "<br>";
-                    echo $email . "<br>";
-                    echo $studentprogram . "<br>";
-                  
-                    echo "testingAntallrader?";                    
-                }
-            }
-        ?>
 <!DOCTYPE html>
 <html>
  <head>
@@ -46,3 +15,34 @@
     </footer>
 </body>
 </html>
+<?php
+          $db = mysqli_connect("10.10.2.5", "maxscaleuser", "maxscalepass", "studentinfo");
+          $info = array();
+         /* if ($db->connect_error) {
+             die(“Connection failed: ” . $db->connect_error);
+          }*/
+?>
+        <?php
+            if(isset($_POST["retrieve"])){
+                $sql1 = "SELECT * FROM students";
+                $resultat = $db->query($sql1);
+                $antall_rader = $db->affected_rows;
+              
+                echo "Knappen er trykket test";
+
+                for ($i = 0; $i < $antall_rader; $i++) {
+                    $rad = $resultat->fetch_object();
+
+                    $studentid = $rad->studentid;
+                    $name = $rad->name;
+                    $email = $rad->email;
+                    $studentprogram = $rad->study_program;
+                    echo $studentid . "<br>";
+                    echo $name . "<br>";
+                    echo $email . "<br>";
+                    echo $studentprogram . "<br>";
+                  
+                    echo "testingAntallrader?";                    
+                }
+            }
+        ?>
