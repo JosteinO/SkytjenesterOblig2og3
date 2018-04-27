@@ -10,7 +10,7 @@
                 $resultat = $db->query($sql1);
                 $antall_rader = $db->affected_rows;
               
-                echo "Knappen er trykket test <br>";
+                echo "Knappen er trykket test";
 
                 for ($i = 0; $i < $antall_rader; $i++) {
                     $rad = $resultat->fetch_object();
