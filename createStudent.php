@@ -1,9 +1,9 @@
 <?php
 
 if (isset($_REQUEST["createStudent"])) { 
-$servername = "localhost";
-$username = "root";
-$password = "passord";
+$servername = "10.10.2.5";
+$username = "dats20";
+$password = "cent soldier thick";
 $dbname = "studentinfo";
 
 // Create connection
