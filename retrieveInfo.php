@@ -1,4 +1,3 @@
-<?php
 <!DOCTYPE html>
 <html>
  <head>
@@ -13,6 +12,7 @@
        "Portnumber: ".$_SERVER['SERVER_PORT']."<br>";
       
     </footer>
+ <?php
           $db = mysqli_connect("10.10.2.5", "maxscaleuser", "maxscalepass", "studentinfo");
           $info = array();
          /* if ($db->connect_error) {
@@ -41,7 +41,7 @@
                     echo "testingAntallrader?";                    
                 }
             }
-        ?>
- </body>
-</html>
 ?>
+  </body>
+</html>
+
