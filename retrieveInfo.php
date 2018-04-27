@@ -1,3 +1,4 @@
+<?php
 <!DOCTYPE html>
 <html>
  <head>
@@ -8,19 +9,15 @@
       <input type="submit" name="retrieve" value="Retrieve all the data!"></input><br>
     </form>
     <footer>
-      <?php
        echo "Server IP: ".$_SERVER['SERVER_ADDR']." <br/> ".
        "Portnumber: ".$_SERVER['SERVER_PORT']."<br>";
-      ?>
+      
     </footer>
-<?php
           $db = mysqli_connect("10.10.2.5", "maxscaleuser", "maxscalepass", "studentinfo");
           $info = array();
          /* if ($db->connect_error) {
              die(“Connection failed: ” . $db->connect_error);
           }*/
-?>
-        <?php
             echo "test <br>";
             if(isset($_POST["retrieve"])){
                 $sql1 = "SELECT * FROM students";
@@ -47,3 +44,4 @@
         ?>
  </body>
 </html>
+?>
