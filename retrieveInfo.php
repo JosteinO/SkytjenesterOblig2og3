@@ -21,6 +21,7 @@
           }*/
 ?>
         <?php
+            echo "test <br>";
             if(isset($_POST["retrieve"])){
                 $sql1 = "SELECT * FROM students";
                 $resultat = $db->query($sql1);
