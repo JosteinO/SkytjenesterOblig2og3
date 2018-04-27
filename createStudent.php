@@ -2,7 +2,7 @@
 
 if (isset($_REQUEST["createStudent"])) { 
 $servername = "10.10.2.5";
-$username = "root";
+$username = "dats20";
 $password = "passord";
 $dbname = "studentinfo";
 
