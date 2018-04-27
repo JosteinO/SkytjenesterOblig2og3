@@ -7,12 +7,12 @@ $password = "passord";
 $dbname = "studentinfo";
 
 // Create connection
-//$db = new mysqli($servername, $username, $password, $dbname);
+$db = new mysqli($servername, $username, $password, $dbname);
 
 // Check connection
-//if ($db->connect_error) {
-//    die("Connection failed: " . $db->connect_error);
-//}     
+if ($db->connect_error) {
+    die("Connection failed: " . $db->connect_error);
+}     
     
 $studentID = $_REQUEST["studentid"];
 $name = $_REQUEST["name"];
@@ -20,19 +20,19 @@ $email = $_REQUEST["email"];
 $studyprog = $_REQUEST["studyprogram"];
 echo "$studentID <br>" . "$name <br>" . " $email <br>" . "$studyprog";
   
-//$sql = "INSERT INTO studentinfo.students (studentid, name, email, study_program) VALUES"
-//            . "('$studentID', '$name', '$email', '$studyprog')";
+$sql = "INSERT INTO studentinfo.students (studentid, name, email, study_program) VALUES"
+            . "('$studentID', '$name', '$email', '$studyprog')";
 
-//      $result = $db->query($sql);
+      $result = $db->query($sql);
   
-//  if ($result) {
-//      header("Location: /createStudent.php");
-//      exit;
-//    } else {
-//        echo "Error in DB: <br>" . $db->error;
-//    }
+  if ($result) {
+      header("Location: /createStudent.php");
+      exit;
+    } else {
+        echo "Error in DB: <br>" . $db->error;
+    }
   
-//    $db->close();
+   $db->close();
 }
 ?>
 
@@ -56,7 +56,7 @@ echo "$studentID <br>" . "$name <br>" . " $email <br>" . "$studyprog";
     <input type="text" name="email" placeholder="Enter your email"><br>
     Study program:<br>
     <input type="text" name="studyprogram" placeholder="Enter your study program"><br><br>
-    <input type="button" name="createStudent" value="Submit">
+    <input type="submit" name="createStudent" value="Submit">
   </fieldset>
 </form>
 
