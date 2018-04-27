@@ -4,7 +4,6 @@
          /* if ($db->connect_error) {
              die(“Connection failed: ” . $db->connect_error);
           }*/
-            echo "test <br>";
             if(isset($_POST["retrieve"])){
                 /*$sql1 = "SELECT * FROM students";
                 $resultat = $db->query($sql1);
