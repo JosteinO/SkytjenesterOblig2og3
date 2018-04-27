@@ -37,5 +37,11 @@
             }
         ?>
     </form>
+        <footer>
+      <?php
+        echo "Server IP: ".$_SERVER['SERVER_ADDR']." <br/> ".
+             "Portnumber: ".$_SERVER['SERVER_PORT'];
+        ?>
+</footer>
   </body>
 </html>
