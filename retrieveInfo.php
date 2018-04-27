@@ -24,7 +24,10 @@
                     echo $email . "<br>";
                     echo $studentprogram . "<br>";
                   
-                    echo "testingAntallrader?";                    
+                    echo "testingAntallrader?";    
+                 
+                    header(‘Location: ’ . $_SERVER[‘HTTP_REFERER’]);
+                    exit;
                 }
             }
 ?>
