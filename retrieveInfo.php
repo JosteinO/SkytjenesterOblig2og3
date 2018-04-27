@@ -6,9 +6,9 @@
           }*/
             echo "test <br>";
             if(isset($_POST["retrieve"])){
-                $sql1 = "SELECT * FROM students";
+                /*$sql1 = "SELECT * FROM students";
                 $resultat = $db->query($sql1);
-                $antall_rader = $db->affected_rows;
+                $antall_rader = $db->affected_rows;*/
               
                 echo "Knappen er trykket test";
 
