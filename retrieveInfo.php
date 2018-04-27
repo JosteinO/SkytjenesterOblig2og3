@@ -5,13 +5,11 @@
   </head>
   
   <body>
-      <?php
-        $db = mysqli_connect("10.10.2.5", "maxscaleuser", "passord", "studentinfo");
-        $info = array();
-      ?>
     <form method="post">
         <input type="submit" name="retrieve" value="Retrieve all the data!"></input><br>
         <?php
+          $db = mysqli_connect("10.10.2.5", "maxscaleuser", "passord", "studentinfo");
+          $info = array();
           if ($db->connect_error) {
              die(“Connection failed: ” . $db->connect_error);
           }
