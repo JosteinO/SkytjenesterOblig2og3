@@ -16,6 +16,8 @@
                 $sql1 = "SELECT * FROM students";
                 $resultat = $db->query($sql1);
                 $antall_rader = $db->affected_rows;
+              
+                echo "Knappe er trykket test";
 
                 for ($i = 0; $i < $antall_rader; $i++) {
                     $rad = $resultat->fetch_object();
@@ -29,7 +31,7 @@
                     echo $email . "<br>";
                     echo $studentprogram . "<br>";
                   
-                    echo "testing123";
+                    echo "testingAntallrader?";
                     
                 }
             }
