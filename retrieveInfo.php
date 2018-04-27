@@ -14,8 +14,22 @@
         <?php
             if(isset($_POST["retrieve"])){
                 $sql1 = "SELECT * FROM students";
-                $db->query($sql1);
-                
+                $resultat = $db->query($sql1);
+                $antall_rader = $db->affected_rows;
+
+                for ($i = 0; $i < $antall_rader; $i++) {
+                    $rad = $resultat->fetch_object();
+
+                    $studentid = $rad->studentid;
+                    $name = $rad->name;
+                    $email = $rad->email;
+                    $studentprogram = $rad->study_program;
+                    echo $studentid . "<br>";
+                    echo $name . "<br>";
+                    echo $email . "<br>";
+                    echo $studentprogram . "<br>";
+                    
+                }
             }
         ?>
     </form>
