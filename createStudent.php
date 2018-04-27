@@ -56,7 +56,7 @@ echo "$studentID <br>" . "$name <br>" . " $email <br>" . "$studyprog";
     <input type="text" name="email" placeholder="Enter your email"><br>
     Study program:<br>
     <input type="text" name="studyprogram" placeholder="Enter your study program"><br><br>
-    <input type="submit" name="createStudent" value="Submit">
+    <input type="button" name="createStudent" value="Submit">
   </fieldset>
 </form>
 
