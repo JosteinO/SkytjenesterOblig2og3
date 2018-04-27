@@ -3,10 +3,10 @@
 $servername = "10.10.2.5";
 $username = "maxscaleuser";
 $password = "maxscalepass";
-$db = "studentinfo";
+$dbname = "studentinfo";
 
 // Create connection
-$db = new mysqli($servername, $username, $password, $db);
+$db = new mysqli($servername, $username, $password, $dbname);
 
 // Check connection
 if ($db->connect_error) {
