@@ -5,15 +5,6 @@ $db = mysqli_connect("10.10.2.5", "maxscaleuser", "maxscalepass", "studentinfo")
              die(“Connection failed: ” . $db->connect_error);
           }
 ?>
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Retrieve Info</title>
-  </head>
-  
-  <body>
-    <form method="post">
-        <input type="submit" name="retrieve" value="Retrieve all the data!"></input><br>
         <?php
             if(isset($_POST["retrieve"])){
                 $sql1 = "SELECT * FROM students";
@@ -38,12 +29,21 @@ $db = mysqli_connect("10.10.2.5", "maxscaleuser", "maxscalepass", "studentinfo")
                 }
             }
         ?>
-    </form>
-        <footer>
-      <?php
-        echo "Server IP: ".$_SERVER['SERVER_ADDR']." <br/> ".
-             "Portnumber: ".$_SERVER['SERVER_PORT'];
-        ?>
-</footer>
+    <!DOCTYPE html>
+          <html>
+            <head>
+              <title>Retrieve Info</title>
+            </head>
+
+            <body>
+              <form method="post">
+                  <input type="submit" name="retrieve" value="Retrieve all the data!"></input><br>
+              </form>
+          <footer>
+                <?php
+                  echo "Server IP: ".$_SERVER['SERVER_ADDR']." <br/> ".
+                       "Portnumber: ".$_SERVER['SERVER_PORT'];
+                  ?>
+          </footer>
   </body>
 </html>
