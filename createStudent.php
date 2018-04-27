@@ -2,7 +2,7 @@
 
 $servername = "10.10.2.5";
 $username = "maxscaleuser@maxscalehost";
-$password = "*E7ACDE28142BFC311A2CE191B3CB3E510A27EB60";
+$password = "maxscalepass";
 $dbname = "studentinfo";
 
 // Create connection
