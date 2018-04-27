@@ -1,17 +1,17 @@
  <?php
           $db = mysqli_connect("dats20-dbproxy", "maxscaleuser", "maxscalepass", "studentinfo");
           $info = array();
-         /* if ($db->connect_error) {
+          if ($db->connect_error) {
              die(“Connection failed: ” . $db->connect_error);
-          }*/
+          }
             if(isset($_POST["retrieve"])){
-                /*$sql1 = "SELECT * FROM students";
+                $sql1 = "SELECT * FROM students";
                 $resultat = $db->query($sql1);
-                $antall_rader = $db->affected_rows;*/
+                $antall_rader = $db->affected_rows;
               
                 echo "Knappen er trykket test";
 
-                /*for ($i = 0; $i < $antall_rader; $i++) {
+                for ($i = 0; $i < $antall_rader; $i++) {
                     $rad = $resultat->fetch_object();
 
                     $studentid = $rad->studentid;
@@ -25,7 +25,7 @@
                   
                     echo "testingAntallrader?";    
                  
-                }*/
+                }
             }
 ?>
 <!DOCTYPE html>
