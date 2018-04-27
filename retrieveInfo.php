@@ -1,9 +1,9 @@
 <?php
-$db = mysqli_connect("10.10.2.5", "maxscaleuser", "maxscalepass", "studentinfo");
+          $db = mysqli_connect("10.10.2.5", "maxscaleuser", "maxscalepass", "studentinfo");
           $info = array();
-          if ($db->connect_error) {
+         /* if ($db->connect_error) {
              die(“Connection failed: ” . $db->connect_error);
-          }
+          }*/
 ?>
         <?php
             if(isset($_POST["retrieve"])){
