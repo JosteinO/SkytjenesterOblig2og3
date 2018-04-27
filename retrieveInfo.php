@@ -7,10 +7,11 @@
     <form action="" method="post">
       <input type="submit" name="retrieve" value="Retrieve all the data!"></input><br>
     </form>
-    <footer>
-       echo "Server IP: ".$_SERVER['SERVER_ADDR']." <br/> ".
+     <?php
+        echo "Server IP: ".$_SERVER['SERVER_ADDR']." <br/> ".
        "Portnumber: ".$_SERVER['SERVER_PORT']."<br>";
-      
+     ?>
+    <footer>
     </footer>
  <?php
           $db = mysqli_connect("10.10.2.5", "maxscaleuser", "maxscalepass", "studentinfo");
