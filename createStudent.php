@@ -1,7 +1,7 @@
 <?php
 
 if (isset($_REQUEST["createStudent"])) { 
-$servername = "10.10.2.5";
+$servername = "10.10.1.233";
 $username = "root";
 $password = "passord";
 $dbname = "studentinfo";
