@@ -2,8 +2,8 @@
 
 if (isset($_REQUEST["createStudent"])) { 
 $servername = "10.10.2.5";
-$username = "dats20";
-$password = "passord";
+$username = "root";
+$password = "maxscalepass";
 $dbname = "studentinfo";
 
 // Create connection
