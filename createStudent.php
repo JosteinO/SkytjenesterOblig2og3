@@ -3,7 +3,7 @@
 if (isset($_REQUEST["createStudent"])) { 
 $servername = "10.10.2.5";
 $username = "root";
-$password = "maxscalepass";
+$password = "passord";
 $dbname = "studentinfo";
 
 // Create connection
