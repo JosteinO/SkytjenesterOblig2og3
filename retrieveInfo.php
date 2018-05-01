@@ -22,14 +22,14 @@
                  for ($i = 0; $i < $antall_rader; $i++) {
                      $rad = $resultat->fetch_object();
 
-                     $studentid = $rad->studentid;
-                     $name = $rad->name;
-                     $email = $rad->email;
-                     $studyprogram = $rad->study_program;
-                     echo "StudentID: " . $studentid . "<br>";
-                     echo "Name: " . $name . "<br>";
-                     echo "Email: " . $email . "<br>";
-                     echo "Studyprogram: " . $studyprogram . "<br><br>";                                       
+                     $studentid = "StudentID: " . $rad->studentid;
+                     $name = "Name: " . $rad->name;
+                     $email = "Email: " . $rad->email;
+                     $studyprogram = "Studyprogram: " . $rad->study_program;
+                     echo $studentid . "<br>";
+                     echo $name . "<br>";
+                     echo $email . "<br>";
+                     echo $studyprogram . "<br><br>";                                       
 
                  }
                  
