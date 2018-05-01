@@ -29,7 +29,7 @@ $sql = "INSERT INTO studentinfo.students (studentid, name, email, study_program)
       header("Location: /createStudent.php");
       exit;
     } else {
-        echo "Error in DB: <br>" . $db->error;
+        echo "Error in DB: " . $db->error;
     }
   
    $db->close();
@@ -44,7 +44,8 @@ $sql = "INSERT INTO studentinfo.students (studentid, name, email, study_program)
     <title>Create student</title>
   </head>
   <body>
-  
+      <h2>Create student</h2><br>
+      <hr><br>
  <form action="" method="POST">
   <fieldset>
     <legend>Student information:</legend>
