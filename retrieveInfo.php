@@ -7,12 +7,10 @@
    <body>
       <form action="" method="post">
        <input type="submit" value="Back to navigation-page" name="toIndex"></input>      
-       <input type="submit" name="retrieve" value="Retrieve all the data!"></input><br>    
       </form>
  
 <?php
           
-            if(isset($_POST["retrieve"])){
                 $servername = "10.10.2.5";
                 $username = "dats20";
                 $password = "passord";
@@ -44,11 +42,9 @@
                       echo $email . "<br>";
                       echo $studyprogram . "<br><br>";    
                      }
-
                  }
                  
                  $db->close();
-             }
 
           if(isset($_POST["toIndex"])){
            header("Location: index.php");
