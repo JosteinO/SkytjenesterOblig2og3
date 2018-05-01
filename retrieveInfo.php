@@ -1,4 +1,26 @@
- <?php
+<!DOCTYPE html>
+<html lang="no">
+ <head>
+   <meta charset="utf-8">
+   <title>Retrieve Info</title>
+ </head>
+   <body>
+      <form action="index.php" method="post">
+       <input type="submit" value="Back to navigation-page" style="position: fixed"></input><br>
+      </form> 
+      <form action="" method="post">
+      <input type="submit" name="retrieve" value="Retrieve all the data!"></input><br>
+    </form>
+    <footer>
+     <?php
+        echo "Server IP: ".$_SERVER['SERVER_ADDR']." <br/> ".
+       "Portnumber: ".$_SERVER['SERVER_PORT']."<br>";
+     ?>
+    </footer>
+  </body>
+</html>
+ 
+<?php
           
             if(isset($_POST["retrieve"])){
                 $servername = "10.10.2.5";
@@ -38,25 +60,3 @@
                  $db->close();
              }
 ?>
-<!DOCTYPE html>
-<html lang="no">
- <head>
-   <meta charset="utf-8">
-   <title>Retrieve Info</title>
- </head>
-   <body>
-      <form action="index.php" method="post">
-       <input type="submit" value="Back to navigation-page" style="position: fixed"></input><br>
-      </form> 
-      <form action="" method="post">
-      <input type="submit" name="retrieve" value="Retrieve all the data!"></input><br>
-    </form>
-    <footer>
-     <?php
-        echo "Server IP: ".$_SERVER['SERVER_ADDR']." <br/> ".
-       "Portnumber: ".$_SERVER['SERVER_PORT']."<br>";
-     ?>
-    </footer>
-  </body>
-</html>
-
