@@ -26,10 +26,10 @@
                      $name = $rad->name;
                      $email = $rad->email;
                      $studyprogram = $rad->study_program;
-                     echo $studentid . "<br>";
-                     echo $name . "<br>";
-                     echo $email . "<br>";
-                     echo $studyprogram . "<br><br>";                                       
+                     echo "StudentID: " . $studentid . "<br>";
+                     echo "Name: " . $name . "<br>";
+                     echo "Email: " . $email . "<br>";
+                     echo "Studyprogram: " . $studyprogram . "<br><br>";                                       
 
                  }
                  
@@ -43,6 +43,9 @@
    <title>Retrieve Info</title>
  </head>
    <body>
+      <form action="index.php" method="post">
+       <input type="submit" value="Back to navigation-page"></input><br>
+      </form> 
       <form action="" method="post">
       <input type="submit" name="retrieve" value="Retrieve all the data!"></input><br>
     </form>
