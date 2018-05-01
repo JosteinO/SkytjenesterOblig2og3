@@ -15,7 +15,7 @@
                 } 
 
                 echo "Testing123";
-                /* $sql1 = "SELECT * FROM studentinfo.students";
+                 $sql1 = "SELECT * FROM studentinfo.students";
                  $resultat = $db->query($sql1);
                  $antall_rader = $db->affected_rows;
 
@@ -35,7 +35,7 @@
 
                      echo "testingAntallrader?";                                         
 
-                 }*/
+                 }
                  
                  $db->close();
              }
