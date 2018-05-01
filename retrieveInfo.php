@@ -9,8 +9,9 @@
                 if ($db->connect_error) {
                    die(“Connection failed: ” . $db->connect_error);
                 }
-             
-                $sql1 = "SELECT * FROM students";
+              
+               echo "Testing123";
+               /* $sql1 = "SELECT * FROM students";
                 $resultat = $db->query($sql1);
                 $antall_rader = $db->affected_rows;
               
@@ -30,7 +31,7 @@
                   
                     echo "testingAntallrader?";    
                  
-                }
+                }*/
             }
 ?>
 <!DOCTYPE html>
