@@ -5,9 +5,7 @@
    <title>Retrieve Info</title>
  </head>
    <body>
-      <form action="index.php" method="post">
-       <input type="submit" value="Back to navigation-page" style="position: fixed"></input><br>
-      </form> 
+      <input type="submit" value="Back to navigation-page" name="toIndex"></input><br>      
       <form action="" method="post">
       <input type="submit" name="retrieve" value="Retrieve all the data!"></input><br>
     </form>
@@ -59,4 +57,8 @@
                  
                  $db->close();
              }
+
+          if(isset($_POST["toIndex"])){
+           header("Location: index.php");
+          }
 ?>
