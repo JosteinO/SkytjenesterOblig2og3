@@ -25,18 +25,20 @@
                 } 
 
                  $sql1 = "SELECT * FROM studentinfo.students";
+                 $sql2 = "SELECT * FROM studentinfo.courses";
                  $resultat = $db->query($sql1);
+                 $resultat2 = $db->query($sql2);
                  $antall_rader = $db->affected_rows;
 
 
                  for ($i = 0; $i < $antall_rader; $i++) {
                      $rad = $resultat->fetch_object();
-                  
+                     $rad2 = $resultat2->fetch_object();
                      if($rad > 0){
                       $studentid = "StudentID: " . $rad->studentid;
                       $name = "Name: " . $rad->name;
                       $email = "Email: " . $rad->email;
-                      $studyprogram = "Studyprogram: " . $rad->study_program;
+                      $studyprogram = "Studyprogram: " . $rad2->study_program;
                       echo $studentid . "<br>";
                       echo $name . "<br>";
                       echo $email . "<br>";
