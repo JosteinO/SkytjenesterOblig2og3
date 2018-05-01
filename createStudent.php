@@ -25,9 +25,13 @@ $sql = "INSERT INTO studentinfo.students (studentid, name, email) VALUES"
     
 $sql2 = "INSERT INTO studentinfo.courses (study_program) VALUES"
             . "('$studyprog')";
+    
+$sql3 = "INSERT INTO studentinfo.enrollment (studentID, courseID) VALUES"
+            . "()";
 
       $result = $db->query($sql);
       $result2 = $db->query($sql2);
+      $result3 = $db->query($sql3);
   
   if ($result ||  $result2) {
       header("Location: /createStudent.php");
