@@ -9,8 +9,6 @@
       <form action="" method="post">
       <input type="submit" name="retrieve" value="Retrieve all the data!"></input><br>
     </form>
-  </body>
-</html>
  
 <?php
           
@@ -55,9 +53,13 @@
           if(isset($_POST["toIndex"])){
            header("Location: index.php");
           }
-
-       <footer>
-       echo "Server IP: ".$_SERVER['SERVER_ADDR']." <br/> ".
-       "Portnumber: ".$_SERVER['SERVER_PORT']."<br>";
-       </footer>
 ?>
+
+<footer>
+     <?php
+        echo "Server IP: ".$_SERVER['SERVER_ADDR']." <br/> ".
+       "Portnumber: ".$_SERVER['SERVER_PORT']."<br>";
+     ?>
+    </footer>
+  </body>
+</html>
