@@ -1,10 +1,15 @@
  <?php
-          $db = mysqli_connect("10.10.2.5", "dats20", "passord", "studentinfo");
-          $info = array();
-          /*if ($db->connect_error) {
-             die(“Connection failed: ” . $db->connect_error);
-          }
+          
             if(isset($_POST["retrieve"])){
+                //Create connection
+                $db = new mysqli("10.10.2.5", "dats20", "passord", "studentinfo");
+                $info = array();
+             
+                //Check connection
+                if ($db->connect_error) {
+                   die(“Connection failed: ” . $db->connect_error);
+                }
+             
                 $sql1 = "SELECT * FROM students";
                 $resultat = $db->query($sql1);
                 $antall_rader = $db->affected_rows;
@@ -26,7 +31,7 @@
                     echo "testingAntallrader?";    
                  
                 }
-            }*/
+            }
 ?>
 <!DOCTYPE html>
 <html>
