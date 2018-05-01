@@ -15,7 +15,7 @@
                 } 
 
                 echo "Testing123";
-                /* $sql1 = "SELECT * FROM students";
+                /* $sql1 = "SELECT * FROM studentinfo.students";
                  $resultat = $db->query($sql1);
                  $antall_rader = $db->affected_rows;
 
@@ -27,11 +27,11 @@
                      $studentid = $rad->studentid;
                      $name = $rad->name;
                      $email = $rad->email;
-                     $studentprogram = $rad->study_program;
+                     $studyprogram = $rad->study_program;
                      echo $studentid . "<br>";
                      echo $name . "<br>";
                      echo $email . "<br>";
-                     echo $studentprogram . "<br>";
+                     echo $studyprogram . "<br>";
 
                      echo "testingAntallrader?";                                         
 
