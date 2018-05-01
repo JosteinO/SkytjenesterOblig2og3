@@ -5,10 +5,10 @@
    <title>Retrieve Info</title>
  </head>
    <body>
-      <input type="submit" value="Back to navigation-page" name="toIndex"></input><br>      
       <form action="" method="post">
-      <input type="submit" name="retrieve" value="Retrieve all the data!"></input><br>
-    </form>
+       <input type="submit" value="Back to navigation-page" name="toIndex"></input><br>      
+       <input type="submit" name="retrieve" value="Retrieve all the data!"></input><br>    
+      </form>
  
 <?php
           
