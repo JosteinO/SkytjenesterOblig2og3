@@ -20,8 +20,8 @@ $email = $_REQUEST["email"];
 $studyprog = $_REQUEST["studyprogram"];
 echo "$studentID <br>" . "$name <br>" . " $email <br>" . "$studyprog";
   
-$sql = "INSERT INTO studentinfo.students (studentid, name, email, courseID) VALUES"
-            . "('$studentID', '$name', '$email', '')";
+$sql = "INSERT INTO studentinfo.students (studentid, name, email) VALUES"
+            . "('$studentID', '$name', '$email')";
     
 $sql2 = "INSERT INTO studentinfo.courses (study_program) VALUES"
             . "('$studyprog')";
