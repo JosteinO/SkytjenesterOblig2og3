@@ -20,12 +20,16 @@ $email = $_REQUEST["email"];
 $studyprog = $_REQUEST["studyprogram"];
 echo "$studentID <br>" . "$name <br>" . " $email <br>" . "$studyprog";
   
-$sql = "INSERT INTO studentinfo.students (studentid, name, email, study_program) VALUES"
-            . "('$studentID', '$name', '$email', '$studyprog')";
+$sql = "INSERT INTO studentinfo.students (studentid, name, email) VALUES"
+            . "('$studentID', '$name', '$email')";
+    
+$sql2 = "INSERT INTO studentinfo.courses (courseID, study_program) VALUES"
+            . "('', '$studyprog')";
 
       $result = $db->query($sql);
+      $result2 = $db->query($sql2);
   
-  if ($result) {
+  if ($result ||  $result2) {
       header("Location: /createStudent.php");
       exit;
     } else {
