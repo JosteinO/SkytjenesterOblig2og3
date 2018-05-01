@@ -1,46 +1,46 @@
  <?php
           
             if(isset($_POST["retrieve"])){
-                //Create connection
-                $db = new mysqli("10.10.2.5", "dats20", "passord", "studentinfo");
-                $info = array();
+                $servername = "10.10.2.5";
+                $username = "dats20";
+                $password = "passord";
+                $dbname = "studentinfo";
              
-                //Check connection
-                if ($db->connect_error) {
-                   die(“Connection failed: ” . $db->connect_error);
-                }
-              
-               echo "Testing123";
-               /* $sql1 = "SELECT * FROM students";
-                $resultat = $db->query($sql1);
-                $antall_rader = $db->affected_rows;
-              
-                echo "Knappen er trykket test";
+                // Create connection
+                $db = new mysqli($servername, $username, $password, $dbname);
 
-                for ($i = 0; $i < $antall_rader; $i++) {
-                    $rad = $resultat->fetch_object();
+                echo "Testing123";
+                /* $sql1 = "SELECT * FROM students";
+                 $resultat = $db->query($sql1);
+                 $antall_rader = $db->affected_rows;
 
-                    $studentid = $rad->studentid;
-                    $name = $rad->name;
-                    $email = $rad->email;
-                    $studentprogram = $rad->study_program;
-                    echo $studentid . "<br>";
-                    echo $name . "<br>";
-                    echo $email . "<br>";
-                    echo $studentprogram . "<br>";
-                  
-                    echo "testingAntallrader?";    
-                 
-                }*/
-            }
+                 echo "Knappen er trykket test";
+
+                 for ($i = 0; $i < $antall_rader; $i++) {
+                     $rad = $resultat->fetch_object();
+
+                     $studentid = $rad->studentid;
+                     $name = $rad->name;
+                     $email = $rad->email;
+                     $studentprogram = $rad->study_program;
+                     echo $studentid . "<br>";
+                     echo $name . "<br>";
+                     echo $email . "<br>";
+                     echo $studentprogram . "<br>";
+
+                     echo "testingAntallrader?";    
+
+                 }*/
+             }
 ?>
 <!DOCTYPE html>
-<html>
+<html lang="no">
  <head>
+   <meta charset="utf-8">
    <title>Retrieve Info</title>
  </head>
    <body>
-    <form method="post">
+      <form action="" method="post">
       <input type="submit" name="retrieve" value="Retrieve all the data!"></input><br>
     </form>
     <footer>
