@@ -55,7 +55,7 @@
           }
 ?>
 
-    <footer style="border-style: solid">
+    <footer style="border-style: solid; text-align: center;">
      <?php
         echo "Server IP: ".$_SERVER['SERVER_ADDR']." <br/> ".
        "Portnumber: ".$_SERVER['SERVER_PORT']."<br>";
