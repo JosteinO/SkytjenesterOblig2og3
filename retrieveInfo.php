@@ -51,7 +51,7 @@
              }
 
           if(isset($_POST["toIndex"])){
-           header("Location: 128.39.121.95:8020/index.php");
+           header("Location: index.php");
           }
 ?>
 
