@@ -23,22 +23,23 @@
                 if ($db->connect_error) {
                     die("Connection failed: " . $db->connect_error);
                 } 
+ 
+                 $sql = "SELECT s.studentid, s.name, s.email, c.study_program
+                 FROM students s 
+                 LEFT JOIN courses c ON s.studentid = c.studentid";
 
-                 $sql1 = "SELECT * FROM studentinfo.students";
-                 $sql2 = "SELECT * FROM studentinfo.courses";
-                 $resultat = $db->query($sql1);
-                 $resultat2 = $db->query($sql2);
+                 $resultat = $db->query($sql);
+
                  $antall_rader = $db->affected_rows;
 
 
                  for ($i = 0; $i < $antall_rader; $i++) {
                      $rad = $resultat->fetch_object();
-                     $rad2 = $resultat2->fetch_object();
                      if($rad > 0){
                       $studentid = "StudentID: " . $rad->studentid;
                       $name = "Name: " . $rad->name;
                       $email = "Email: " . $rad->email;
-                      $studyprogram = "Studyprogram: " . $rad2->study_program;
+                      $studyprogram = "Studyprogram: " . $rad->study_program;
                       echo $studentid . "<br>";
                       echo $name . "<br>";
                       echo $email . "<br>";
