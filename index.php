@@ -12,7 +12,7 @@ and open the template in the editor.
     <body>
         <h2>Welcome - Please pick an option below</h2><hr>
         
-        Create a student: <a href="/createStudent">Click here</a><br><br>
+        Create a student: <a href="/createStudent.php">Click here</a><br><br>
         View all students: <a href="/retrieveInfo.php">Click here</a>
         
         <br><hr><br><br>
