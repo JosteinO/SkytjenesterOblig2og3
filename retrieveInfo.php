@@ -51,11 +51,11 @@
              }
 
           if(isset($_POST["toIndex"])){
-           header("Location: index.php");
+           header("Location: 128.39.121.95:8020/index.php");
           }
 ?>
 
-<footer>
+    <footer style="border-style: solid">
      <?php
         echo "Server IP: ".$_SERVER['SERVER_ADDR']." <br/> ".
        "Portnumber: ".$_SERVER['SERVER_PORT']."<br>";
