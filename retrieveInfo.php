@@ -1,10 +1,10 @@
  <?php
           $db = mysqli_connect("10.10.2.5", "dats20", "passord", "studentinfo");
           $info = array();
-          if ($db->connect_error) {
+          /*if ($db->connect_error) {
              die(“Connection failed: ” . $db->connect_error);
           }
-          /*  if(isset($_POST["retrieve"])){
+            if(isset($_POST["retrieve"])){
                 $sql1 = "SELECT * FROM students";
                 $resultat = $db->query($sql1);
                 $antall_rader = $db->affected_rows;
