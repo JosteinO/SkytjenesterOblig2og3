@@ -44,7 +44,7 @@ $sql = "INSERT INTO studentinfo.students (studentid, name, email, study_program)
     <title>Create student</title>
   </head>
   <body>
-      <h2>Create student</h2><br>
+      <h2>Create student</h2>
       <hr><br>
  <form action="" method="POST">
   <fieldset>
