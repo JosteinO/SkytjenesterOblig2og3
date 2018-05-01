@@ -28,7 +28,6 @@ $sql2 = "INSERT INTO studentinfo.courses (study_program) VALUES"
 
       $result = $db->query($sql);
       $result2 = $db->query($sql2);
-      $result3 = $db->query($sql3);
   
   if ($result ||  $result2) {
       header("Location: /createStudent.php");
