@@ -14,12 +14,10 @@
                     die("Connection failed: " . $db->connect_error);
                 } 
 
-                echo "Testing123";
                  $sql1 = "SELECT * FROM studentinfo.students";
                  $resultat = $db->query($sql1);
                  $antall_rader = $db->affected_rows;
 
-                 echo "Knappen er trykket test";
 
                  for ($i = 0; $i < $antall_rader; $i++) {
                      $rad = $resultat->fetch_object();
@@ -31,9 +29,7 @@
                      echo $studentid . "<br>";
                      echo $name . "<br>";
                      echo $email . "<br>";
-                     echo $studyprogram . "<br>";
-
-                     echo "testingAntallrader?";                                         
+                     echo $studyprogram . "<br><br>";                                       
 
                  }
                  
