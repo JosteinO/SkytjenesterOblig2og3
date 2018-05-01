@@ -46,7 +46,7 @@
  </head>
    <body>
       <form action="index.php" method="post">
-       <input type="submit" value="Back to navigation-page"></input><br>
+       <input type="submit" value="Back to navigation-page" style="position: fixed"></input><br>
       </form> 
       <form action="" method="post">
       <input type="submit" name="retrieve" value="Retrieve all the data!"></input><br>
