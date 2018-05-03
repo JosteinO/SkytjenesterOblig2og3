@@ -13,10 +13,11 @@
       die("Connection failed: " . $db->connect_error);
     }
            
-    $studentid = $_POST["studentid"];
+    
+    /*$studentid = $_POST["studentid"];
     $name = $_POST["studentname"];
     $email = $_POST["email"];
-    $studyProgram = $_POST["program"];
+    $studyProgram = $_POST["program"];*/
   }
 
 
@@ -75,5 +76,11 @@
     <br/>
     <p>ps: It is only the data that has an input value that will change.</p>
     <p>If there is something you do not want to change, do not write anything in that input field.</p>
+    <footer style="border-style: solid; text-align: center;">
+     <?php
+        echo "Server IP: ".$_SERVER['SERVER_ADDR']." <br/> ".
+       "Portnumber: ".$_SERVER['SERVER_PORT']."<br>";
+     ?>
+    </footer>
   </body>
 </html>
