@@ -30,7 +30,7 @@ $sql2 = "INSERT INTO studentinfo.courses (study_program, studentid) VALUES"
       $result2 = $db->query($sql2);
 
   if ($result ||  $result2) {
-      header("Location: /createStudent.php");
+      header("Location: /retrieveInfo.php");
       exit;
     } else {
         echo "Error in DB: " . $db->error;
