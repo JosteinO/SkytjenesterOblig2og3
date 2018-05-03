@@ -36,6 +36,7 @@ function getStudent(){//This method searches the database for the wanted student
 
   //if($rad>0){
     $studentid = $rad->studentid;
+    $studentid2 = $result[0];
     echo "
     <html>
       <head>
@@ -44,19 +45,19 @@ function getStudent(){//This method searches the database for the wanted student
         <table>
           <tr>
             <td>StudentID</td>
-            <td>".$studentid."</td>
+            <td>".$studentid."/".$studentid2."</td>
           </tr>
           <tr>
             <td>Name</td>
-            <td>".$rad->name."</td>
+            <td>".$rad->name."/".$result[1]."</td>
           </tr>
           <tr>
-            <td>StudentID</td>
-            <td>".$rad->email."</td>
+            <td>Email</td>
+            <td>".$rad->email."/".$result[2]."</td>
           </tr>
           <tr>
-            <td>StudentID</td>
-            <td>".$rad->study_program."</td>
+            <td>Studyprogram</td>
+            <td>".$rad->study_program."/".$result[3]."</td>
           </tr>
           <tr>
             <td>Delete student</td>
