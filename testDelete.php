@@ -8,6 +8,9 @@
       <form action="" method="post">
           <input type="text" name="studentid"></input>
        <input type="submit" value="Delete student" name="delete"></input>
+      <form action="" method="post">
+          <input type="submit" value="Back to navigation-page" name="toIndex"></input>
+      </form>
       </form>
 
 <?php
@@ -45,6 +48,10 @@
            
               echo $studentid . " is now deleted!";
               $db->close();
+          }
+
+          if(isset($_POST["toIndex"])){
+           header("Location: index.php");
           }
 ?>
 
