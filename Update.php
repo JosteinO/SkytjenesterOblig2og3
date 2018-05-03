@@ -33,7 +33,7 @@
                 if ($db->connect_error) {
                     die("Connection failed: " . $db->connect_error);
                 }
-                 $studentid = $_POST["studentidedit"];
+                 $studentidedit = $_POST["studentidedit"];
                  $sql = "SELECT s.studentid, s.name, s.email, c.study_program
                  FROM students s
                  LEFT JOIN courses c ON s.'$studentidedit' = c.'$studentidedit'";
