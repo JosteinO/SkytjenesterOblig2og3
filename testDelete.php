@@ -33,7 +33,7 @@
            
               $sql = "DELETE
               FROM students
-              WHERE studentid LIKE '%$studentid%'";
+              WHERE studentid='%$studentid%'";
            
               $resultat = $db->query($sql);   
            
