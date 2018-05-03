@@ -60,7 +60,9 @@
         <th>New information</th>
         
           Type in the student id of the student you want to edit and press submit!
-          <input type="text" name="studentidedit" value="sXXXXXX"></input><br><br><br>
+          <input type="text" name="studentidedit" value="sXXXXXX"></input>
+          <input type="submit" name="submit">Submit</input>
+          <br><br><br>
         <tr>
           <td>Student id</td>
           <td><input type="text" name="studentid" value="<?php echo $studentid; ?>"></input></td>
