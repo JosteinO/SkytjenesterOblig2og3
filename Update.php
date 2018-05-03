@@ -20,8 +20,17 @@
     $studyProgram = $_POST["program"];*/
   }
 
-
- /* $sql2 = "SELECT s.studentid, s.name, s.email, c.study_program
+    $servername = "10.10.2.5";
+    $username = "dats20";
+    $password = "passord";
+    $dbname = "studentinfo";
+    // Create connection
+    $db = new mysqli($servername, $username, $password, $dbname);
+    // Check connection
+    if ($db->connect_error) {
+      die("Connection failed: " . $db->connect_error);
+    }
+  $sql2 = "SELECT s.studentid, s.name, s.email, c.study_program
   FROM students s
   LEFT JOIN courses c ON s.studentid = c.studentid";
   $resultat2 = $db->query($sql);
@@ -37,7 +46,7 @@
                       echo $name . "<br>";
                       echo $email . "<br>";
                       echo $studyprogram . "<br><br>";
-  }*/
+  }
 ?>
 <html>
   <header>
