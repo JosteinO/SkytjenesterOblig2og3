@@ -40,10 +40,10 @@
                  for ($i = 0; $i < $antall_rader; $i++) {
                      $rad = $resultat->fetch_object();
                      if($rad > 0){
-                      $studentid = "StudentID: " . $rad->studentid;
-                      $name = "Name: " . $rad->name;
-                      $email = "Email: " . $rad->email;
-                      $studyprogram = "Studyprogram: " . $rad->study_program;
+                      $studentid = $rad->studentid;
+                      $name = $rad->name;
+                      $email = $rad->email;
+                      $studyprogram = $rad->study_program;
                      }
                  }
 
@@ -58,6 +58,12 @@
       <table>
         <th></th>
         <th>New information</th>
+        <tr>
+          <td>Type in the student id of the student you want to edit!</td>
+          <td><input type="text" name="studentidedit" value="sXXXXXX"></input></td>
+        </tr>
+        <br>
+        <br>
         <tr>
           <td>Student id</td>
           <td><input type="text" name="studentid" value="<?php echo $studentid; ?>"></input></td>
