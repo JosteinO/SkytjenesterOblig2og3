@@ -1,5 +1,4 @@
 <?php
-include "./Database.php";
 
 //checks if a post is set and performs the wanted function or prints the form
 if(isset($_POST["getStudent"])){
@@ -16,15 +15,24 @@ else{
 
 function getStudent(){//This method searches the database for the wanted student
 
-  $db = dbConnection();//connect to database
+  $servername = "10.10.2.5";
+  $username = "dats20";
+  $password = "passord";
+  $dbname = "studentinfo";
 
-  $sql = "SELECT s.studentid, s.name, s.email, c.study_program
-  FROM students s
-  WHERE s.studentid = ".$_POST["studentid"]."
-  LEFT JOIN courses c ON s.studentid = c.studentid";
+  // Create connection
+  $db = new mysqli($servername, $username, $password, $dbname);
 
-  $resultat = $db->query($sql);//query sql
-  $rad = $resultat->fetch_object();//gets the objects
+  // Check connection
+  if ($db->connect_error) {
+      die("Connection failed: " . $db->connect_error);
+  }
+
+   $sql = "SELECT s.studentid, s.name, s.email, c.study_program
+   FROM students s
+   LEFT JOIN courses c ON s.studentid = c.studentid";
+
+   $resultat = $db->query($sql);
 
   if($rad>0){
     $studentid = $rad->studentid;
@@ -73,7 +81,7 @@ function deleteStudent(){//This is the function that when called deletes the stu
 
   $db = dbConnection();//connect to the database
 
-  $sql = "DELETE FROM students
+  $sql = "DELETE FROM students.Student_info
   WHERE studentID = ".$_POST["studentid"].";";
 
   $sql = lagSQL();
