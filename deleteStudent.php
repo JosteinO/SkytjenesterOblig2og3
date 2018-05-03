@@ -6,7 +6,7 @@
  </head>
    <body>
       <form action="" method="post">
-          <input type="text" name="studentid"></input>
+          Type in studentid for the student you want to delete: <input type="text" name="studentid" placeholder="sXXXXXX"></input>
        <input type="submit" value="Delete student" name="delete"></input>
       <form action="" method="post">
           <input type="submit" value="Back to navigation-page" name="toIndex"></input>
