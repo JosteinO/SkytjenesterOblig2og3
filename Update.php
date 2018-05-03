@@ -41,7 +41,7 @@
                      $rad = $resultat->fetch_object();
                      if($rad > 0){
                       $studentid = "StudentID: " . $rad->studentid;
-                      $pname = "Name: " . $rad->name;
+                      $name = "Name: " . $rad->name;
                       $email = "Email: " . $rad->email;
                       $studyprogram = "Studyprogram: " . $rad->study_program;
                      }
@@ -60,19 +60,19 @@
         <th>New information</th>
         <tr>
           <td>Student id</td>
-          <td><input type="text" name="studentid" value="'$name'"></input></td>
+          <td><input type="text" name="studentid" value="$studentid"></input></td>
         </tr>
         <tr>
           <td>Student name</td>
-          <td><input type="text" name="studentname"></input></td>
+          <td><input type="text" name="name" value="$name"></input></td>
         </tr>
         <tr>
           <td>Student email</td>
-          <td><input type="text" name="email"></input></td>
+          <td><input type="text" name="email" value="$email"></input></td>
         </tr>
         <tr>
           <td>Study program</td>
-          <td><input type="text" name="program"></input></td>
+          <td><input type="text" name="program" value="$studyprogram"></input></td>
         </tr>
         <tr>
           <td>Submit changes</td>
