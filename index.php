@@ -13,7 +13,8 @@ and open the template in the editor.
         <h2>Welcome - Please pick an option below</h2><hr>
 
         Create a student: <a href="/createStudent.php">Click here</a><br><br>
-        View all students: <a href="/retrieveInfo.php">Click here</a>
+        View all students: <a href="/retrieveInfo.php">Click here</a><br><br>
+        Delete a student: <a href="/deleteStudent.php">Click here</a><br><br>
 
         <br><hr><br><br>
         <?php
