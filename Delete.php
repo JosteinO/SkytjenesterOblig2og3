@@ -34,7 +34,7 @@ function getStudent(){//This method searches the database for the wanted student
 
    $resultat = $db->query($sql);
 
-  if($rad>0){
+  //if($rad>0){
     $studentid = $rad->studentid;
     echo "
     <html>
@@ -70,11 +70,11 @@ function getStudent(){//This method searches the database for the wanted student
       </body>
     </html>
     ";
-  }
-  else{
-    echo "Something went wrong, check if the studentid i correct <br/>";
-    printForm();
-  }
+  //}
+  //else{
+  //  echo "Something went wrong, check if the studentid i correct <br/>";
+  //  printForm();
+  //}
 }
 
 function deleteStudent(){//This is the function that when called deletes the student
