@@ -65,7 +65,7 @@ $sql2 = "INSERT INTO studentinfo.courses (study_program, studentid) VALUES"
   </fieldset>
 </form>
 
-<br><br><br><hr>
+<br><br>Go back: <a href="/index.php">Click here</a><br><br><hr>
 
       <footer>
       <?php
