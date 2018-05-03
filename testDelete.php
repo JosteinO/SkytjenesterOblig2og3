@@ -40,25 +40,6 @@
               echo $studentid . " is now deleted!";
               $db->close();
           }
-
-$sql1 = "SELECT s.studentid, s.name, s.email, c.study_program
-                 FROM students s
-                 LEFT JOIN courses c ON s.studentid = c.studentid";
-                 $resultat1 = $db->query($sql1);
-                 $antall_rader = $db->affected_rows;
-                 for ($i = 0; $i < $antall_rader; $i++) {
-                     $rad = $resultat1->fetch_object();
-                     if($rad > 0){
-                      $studentid = "StudentID: " . $rad->studentid;
-                      $name = "Name: " . $rad->name;
-                      $email = "Email: " . $rad->email;
-                      $studyprogram = "Studyprogram: " . $rad->study_program;
-                      echo $studentid . "<br>";
-                      echo $name . "<br>";
-                      echo $email . "<br>";
-                      echo $studyprogram . "<br><br>";
-                     }
-                 }
 ?>
 
     <footer style="border-style: solid; text-align: center;">
