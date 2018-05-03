@@ -21,6 +21,7 @@
   }
 
 
+              if(isset($_POST["submit"])){
 
                 $servername = "10.10.2.5";
                 $username = "dats20";
@@ -32,9 +33,10 @@
                 if ($db->connect_error) {
                     die("Connection failed: " . $db->connect_error);
                 }
+                 $studentid = $_POST["studentidedit"];
                  $sql = "SELECT s.studentid, s.name, s.email, c.study_program
                  FROM students s
-                 LEFT JOIN courses c ON s.studentid = c.studentid";
+                 LEFT JOIN courses c ON s.'$studentidedit' = c.'$studentidedit'";
                  $resultat = $db->query($sql);
                  $antall_rader = $db->affected_rows;
                  for ($i = 0; $i < $antall_rader; $i++) {
@@ -46,6 +48,7 @@
                       $studyprogram = $rad->study_program;
                      }
                  }
+              }
 
 
 ?>
