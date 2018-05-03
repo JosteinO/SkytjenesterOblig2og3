@@ -26,19 +26,20 @@
            
               $studentid = $_POST["studentid"];
               
-              /*$sql = "DELETE s.studentid, s.name, s.email, c.study_program
+              $sql = "DELETE s.studentid, s.name, s.email, c.study_program
               FROM students s
-              LEFT JOIN courses c ON s.'$studentid' = c.$studentid";
-              $resultat = $db->query($sql);*/
+              LEFT JOIN courses c ON s.'$studentid' = c.$studentid
+              WHERE studentid='$studentid'";
+              $resultat = $db->query($sql);
            
-              $sql = "DELETE
+              /*$sql = "DELETE
               FROM courses
               WHERE studentid='$studentid'";
            
               $resultat = $db->query($sql);   
            
               echo $studentid . " is now deleted!";
-              $db->close();
+              $db->close();*/
           }
 ?>
 
