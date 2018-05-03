@@ -26,9 +26,14 @@
           if(isset($_POST["delete"])){
               $studentid = $_POST["studentid"];
               
-              $sql = "DELETE s.studentid, s.name, s.email, c.study_program
+              /*$sql = "DELETE s.studentid, s.name, s.email, c.study_program
               FROM students s
               LEFT JOIN courses c ON s.'$studentid' = c.$studentid";
+              $resultat = $db->query($sql);*/
+           
+              $sql = "DELETE studentid, name, email
+              FROM students
+              WHERE studentid LIKE '%$studentid%'";
               $resultat = $db->query($sql);   
            
               echo $studentid . " is now deleted!";
