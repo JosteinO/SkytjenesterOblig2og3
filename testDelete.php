@@ -32,7 +32,7 @@
               $resultat = $db->query($sql);*/
            
               $sql = "DELETE
-              FROM students
+              FROM courses
               WHERE studentid='$studentid'";
            
               $resultat = $db->query($sql);   
