@@ -11,19 +11,19 @@
       </form>
 
 <?php
-                $servername = "10.10.2.5";
-                $username = "dats20";
-                $password = "passord";
-                $dbname = "studentinfo";
-                // Create connection
-                $db = new mysqli($servername, $username, $password, $dbname);
-                // Check connection
-                if ($db->connect_error) {
-                    die("Connection failed: " . $db->connect_error);
-                }
-
-                //$db->close();
+                
           if(isset($_POST["delete"])){
+              $servername = "10.10.2.5";
+              $username = "dats20";
+              $password = "passord";
+              $dbname = "studentinfo";
+              // Create connection
+              $db = new mysqli($servername, $username, $password, $dbname);
+              // Check connection
+              if ($db->connect_error) {
+                  die("Connection failed: " . $db->connect_error);
+              }
+           
               $studentid = $_POST["studentid"];
               
               /*$sql = "DELETE s.studentid, s.name, s.email, c.study_program
@@ -37,6 +37,7 @@
               $resultat = $db->query($sql);   
            
               echo $studentid . " is now deleted!";
+              $db->close();
           }
 ?>
 
