@@ -47,8 +47,6 @@
                      }
                  }
 
-echo $pname;
-
 
 ?>
 <html>
@@ -62,7 +60,7 @@ echo $pname;
         <th>New information</th>
         <tr>
           <td>Student id</td>
-          <td><input type="text" name="studentid"></input></td>
+          <td><input type="text" name="studentid" value="'$name'"></input></td>
         </tr>
         <tr>
           <td>Student name</td>
