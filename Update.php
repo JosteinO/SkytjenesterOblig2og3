@@ -1,13 +1,49 @@
 <!DOCTYPE html>
 <?php
 
+  if(isset($_POST["delete"])){
+    $servername = "10.10.2.5";
+    $username = "dats20";
+    $password = "passord";
+    $dbname = "studentinfo";
+    // Create connection
+    $db = new mysqli($servername, $username, $password, $dbname);
+    // Check connection
+    if ($db->connect_error) {
+      die("Connection failed: " . $db->connect_error);
+    }
+           
+    $studentid = $_POST["studentid"];
+    $name = $_POST["studentname"];
+    $email = $_POST["email"];
+    $studyProgram = $_POST["program"];
+  }
+
+
+  $sql2 = "SELECT s.studentid, s.name, s.email, c.study_program
+  FROM students s
+  LEFT JOIN courses c ON s.studentid = c.studentid";
+  $resultat2 = $db->query($sql);
+  $antall_rader = $db->affected_rows;
+  for ($i = 0; $i < $antall_rader; $i++) {
+     $rad = $resultat2->fetch_object();
+     if($rad > 0){
+        $studentid = "StudentID: " . $rad->studentid;
+        $name = "Name: " . $rad->name;
+        $email = "Email: " . $rad->email;
+        $studyprogram = "Studyprogram: " . $rad->study_program;
+                      echo $studentid . "<br>";
+                      echo $name . "<br>";
+                      echo $email . "<br>";
+                      echo $studyprogram . "<br><br>";
+  }
 ?>
 <html>
   <header>
     <title>Update student information</title>
   </header>
   <body>
-    <form action="DoUpdate.php" method="POST">
+    <form action="" method="POST">
       <table>
         <th></th>
         <th>New information</th>
