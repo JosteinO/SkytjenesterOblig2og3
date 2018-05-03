@@ -36,10 +36,10 @@
               FROM courses
               WHERE studentid='$studentid'";
            
-              $resultat = $db->query($sql);   
+              $resultat = $db->query($sql);   */
            
               echo $studentid . " is now deleted!";
-              $db->close();*/
+              $db->close();
           }
 ?>
 
