@@ -60,19 +60,19 @@
         <th>New information</th>
         <tr>
           <td>Student id</td>
-          <td><input type="text" name="studentid" value="$studentid"></input></td>
+          <td><input type="text" name="studentid" value="<?php $studentid ?>"></input></td>
         </tr>
         <tr>
-          <td>Student name</td>
-          <td><input type="text" name="name" value="$name"></input></td>
+          <td>Student name</td> 
+          <td><input type="text" name="name" value="<?php $name ?>"></input></td>
         </tr>
         <tr>
           <td>Student email</td>
-          <td><input type="text" name="email" value="$email"></input></td>
+          <td><input type="text" name="email" value="<?php $email ?>"></input></td>
         </tr>
         <tr>
           <td>Study program</td>
-          <td><input type="text" name="program" value="$studyprogram"></input></td>
+          <td><input type="text" name="program" value="<?php $studyprogram ?>"></input></td>
         </tr>
         <tr>
           <td>Submit changes</td>
