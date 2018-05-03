@@ -61,7 +61,7 @@
         
           Type in the student id of the student you want to edit and press submit!
           <input type="text" name="studentidedit" value="sXXXXXX"></input>
-          <input type="submit" name="submit">Submit</input>
+          <input type="submit" name="submit" value="Submit"></input>
           <br><br><br>
         <tr>
           <td>Student id</td>
