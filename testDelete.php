@@ -31,9 +31,10 @@
               LEFT JOIN courses c ON s.'$studentid' = c.$studentid";
               $resultat = $db->query($sql);*/
            
-              $sql = "DELETE studentid, name, email
+              $sql = "DELETE
               FROM students
               WHERE studentid LIKE '%$studentid%'";
+           
               $resultat = $db->query($sql);   
            
               echo $studentid . " is now deleted!";
