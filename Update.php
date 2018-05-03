@@ -41,16 +41,13 @@
                      $rad = $resultat->fetch_object();
                      if($rad > 0){
                       $studentid = "StudentID: " . $rad->studentid;
-                      $name = "Name: " . $rad->name;
+                      $pname = "Name: " . $rad->name;
                       $email = "Email: " . $rad->email;
                       $studyprogram = "Studyprogram: " . $rad->study_program;
-                      echo $studentid . "<br>";
-                      echo $name . "<br>";
-                      echo $email . "<br>";
-                      echo $studyprogram . "<br><br>";
                      }
                  }
-                 $db->close();
+
+echo $pname;
 
 
 ?>
@@ -95,6 +92,7 @@
      <?php
         echo "Server IP: ".$_SERVER['SERVER_ADDR']." <br/> ".
        "Portnumber: ".$_SERVER['SERVER_PORT']."<br>";
+       $db->close();
      ?>
     </footer>
   </body>
