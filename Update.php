@@ -58,10 +58,9 @@
       <table>
         <th></th>
         <th>New information</th>
-        <th>
-          <td>Type in the student id of the student you want to edit!</td>
-          <td><input type="text" name="studentidedit" value="sXXXXXX"></input></td>
-        </th>
+        
+          Type in the student id of the student you want to edit!
+          <input type="text" name="studentidedit" value="sXXXXXX"></input><br>
         <tr>
           <td>Student id</td>
           <td><input type="text" name="studentid" value="<?php echo $studentid; ?>"></input></td>
