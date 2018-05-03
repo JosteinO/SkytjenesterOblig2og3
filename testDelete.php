@@ -26,17 +26,22 @@
            
               $studentid = $_POST["studentid"];
               
-              $sql = "DELETE s, c
+              /*$sql = "DELETE s, c
               FROM students s
               JOIN courses c ON s.'$studentid'=c.'$studentid'
               WHERE s.studentid='$studentid' AND c.studentid='$studentid'";
-              $resultat = $db->query($sql);
+              $resultat = $db->query($sql);*/
            
-              /*$sql = "DELETE
+              $sql = "DELETE
               FROM courses
               WHERE studentid='$studentid'";
            
-              $resultat = $db->query($sql);   */
+              $sql2 = "DELETE
+              FROM students
+              WHERE studentid='$studentid'";
+           
+              $resultat = $db->query($sql);   
+              $resultat2 = $db->query($sql2);
            
               echo $studentid . " is now deleted!";
               $db->close();
