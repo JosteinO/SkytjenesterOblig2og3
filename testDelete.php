@@ -29,8 +29,9 @@
               $sql = "DELETE s.studentid, s.name, s.email, c.study_program
               FROM students s
               LEFT JOIN courses c ON s.'$studentid' = c.$studentid";
-              
-              echo $studentid . "is now deleted!";
+              $resultat = $db->query($sql);   
+           
+              echo $studentid . " is now deleted!";
           }
 ?>
 
