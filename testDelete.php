@@ -29,7 +29,7 @@
               $sql = "DELETE s.studentid, s.name, s.email, c.study_program
               FROM students s
               LEFT JOIN courses c ON s.'$studentid' = c.$studentid
-              WHERE studentid='$studentid'";
+              WHERE s.studentid='$studentid'";
               $resultat = $db->query($sql);
            
               /*$sql = "DELETE
