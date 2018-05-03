@@ -21,7 +21,7 @@
   }
 
 
-  $sql2 = "SELECT s.studentid, s.name, s.email, c.study_program
+ /* $sql2 = "SELECT s.studentid, s.name, s.email, c.study_program
   FROM students s
   LEFT JOIN courses c ON s.studentid = c.studentid";
   $resultat2 = $db->query($sql);
@@ -37,7 +37,7 @@
                       echo $name . "<br>";
                       echo $email . "<br>";
                       echo $studyprogram . "<br><br>";
-  }
+  }*/
 ?>
 <html>
   <header>
