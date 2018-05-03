@@ -1,4 +1,7 @@
 <!DOCTYPE html>
+<?php
+
+?>
 <html>
   <header>
     <title>Update student information</title>
@@ -6,6 +9,8 @@
   <body>
     <form action="DoUpdate.php" method="POST">
       <table>
+        <th></th>
+        <th>New information</th>
         <tr>
           <td>Student id</td>
           <td><input type="text" name="studentid"></input></td>
@@ -31,5 +36,8 @@
 
 
     </form>
+    <br/>
+    <p>ps: It is only the data that has an input value that will change.</p>
+    <p>If there is something you do not want to change, do not write anything in that input field.</p>
   </body>
 </html>

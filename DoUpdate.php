@@ -1,8 +1,20 @@
 <!DOCTYPE html>
 
 <?php
+include "Database.php";
 
-echo lagSQL();
+if(isset($_POST["update"])){
+  $sql = lagSQL();
+  $db = dbConnection();
+
+  if ($db->query($sql) === TRUE) {
+      echo "Student updated";
+  } else {
+      echo "Error updating record: " . $db->error;
+  }
+
+  $db->close();
+}
 
 function lagSQL(){  //function for å lage SQL UPDATE setning
 
@@ -41,21 +53,7 @@ function lagSQL(){  //function for å lage SQL UPDATE setning
   return $sql;                                                                    //returner SQL setningen
 }                                                                                 //avslutter lagSQL function
 
-function dbConnetion(){ //function for å koble til databasen
-  $servername = "10.10.2.5";
-  $username = "maxscaleuser";
-  $password = "maxscalepass";
-  $dbname = "studentinfo" ;
 
-  // Create connection
-  $db = new mysqli($servername, $username, $password, $dbname);
-
-  // Check connection
-  if ($db->connect_error) {
-  die("Connection failed: " . $db->connect_error);
-  }
-  return $db;
-}
 
 
 

@@ -6,26 +6,26 @@
  </head>
    <body>
       <form action="" method="post">
-       <input type="submit" value="Back to navigation-page" name="toIndex"></input>      
+       <input type="submit" value="Back to navigation-page" name="toIndex"></input>
       </form>
- 
+
 <?php
-          
+
                 $servername = "10.10.2.5";
                 $username = "dats20";
                 $password = "passord";
                 $dbname = "studentinfo";
-             
+
                 // Create connection
                 $db = new mysqli($servername, $username, $password, $dbname);
-             
+
                 // Check connection
                 if ($db->connect_error) {
                     die("Connection failed: " . $db->connect_error);
-                } 
- 
+                }
+
                  $sql = "SELECT s.studentid, s.name, s.email, c.study_program
-                 FROM students s 
+                 FROM students s
                  LEFT JOIN courses c ON s.studentid = c.studentid";
 
                  $resultat = $db->query($sql);
@@ -43,10 +43,10 @@
                       echo $studentid . "<br>";
                       echo $name . "<br>";
                       echo $email . "<br>";
-                      echo $studyprogram . "<br><br>";    
+                      echo $studyprogram . "<br><br>";
                      }
                  }
-                 
+
                  $db->close();
 
           if(isset($_POST["toIndex"])){

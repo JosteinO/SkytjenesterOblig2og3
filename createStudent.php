@@ -1,6 +1,6 @@
 <?php
 
-if (isset($_REQUEST["createStudent"])) { 
+if (isset($_REQUEST["createStudent"])) {
 $servername = "10.10.2.5";
 $username = "dats20";
 $password = "passord";
@@ -12,30 +12,30 @@ $db = new mysqli($servername, $username, $password, $dbname);
 // Check connection
 if ($db->connect_error) {
     die("Connection failed: " . $db->connect_error);
-}     
-    
+}
+
 $studentID = $_REQUEST["studentid"];
 $name = $_REQUEST["name"];
 $email = $_REQUEST["email"];
 $studyprog = $_REQUEST["studyprogram"];
 echo "$studentID <br>" . "$name <br>" . " $email <br>" . "$studyprog";
-  
+
 $sql = "INSERT INTO studentinfo.students (studentid, name, email) VALUES"
             . "('$studentID', '$name', '$email')";
-    
+
 $sql2 = "INSERT INTO studentinfo.courses (study_program, studentid) VALUES"
             . "('$studyprog', '$studentID')";
 
       $result = $db->query($sql);
       $result2 = $db->query($sql2);
-  
+
   if ($result ||  $result2) {
       header("Location: /createStudent.php");
       exit;
     } else {
         echo "Error in DB: " . $db->error;
     }
-  
+
    $db->close();
 }
 ?>
