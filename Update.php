@@ -51,18 +51,8 @@
                       $email = $rad->email;
                       $studyprogram = $rad->study_program;
                      }
-                 }
-              }
-
-
-?>
-<html>
-  <header>
-    <title>Update student information</title>
-  </header>
-  <body>
-    <form action="" method="POST">
-      <table>
+                       <form action="" method="POST">
+      echo '<table>
         <th></th>
         <th>New information</th>
         
@@ -76,15 +66,56 @@
         </tr>
         <tr>
           <td>Student name</td> 
-          <td><input type="text" name="name" value="<?php echo $name; ?>"></input></td>
+          <td><input type="text" name="name" value="' echo $name; '"></input></td>
         </tr>
         <tr>
           <td>Student email</td>
-          <td><input type="text" name="email" value="<?php echo $email; ?>"></input></td>
+          <td><input type="text" name="email" value="' echo $email; '"></input></td>
         </tr>
         <tr>
           <td>Study program</td>
-          <td><input type="text" name="program" value="<?php echo $studyprogram; ?>"></input></td>
+          <td><input type="text" name="program" value="' echo $studyprogram; '"></input></td>
+        </tr>
+        <tr>
+          <td>Submit changes</td>
+          <td><input type="submit" name="update"></input></td>
+        </tr>
+      </table>
+    </form>'
+                 }
+              }
+
+
+?>
+<html>
+  <header>
+    <title>Update student information</title>
+  </header>
+  <body>
+    <!--<form action="" method="POST">
+      <table>
+        <th></th>
+        <th>New information</th>
+        
+          Type in the student id of the student you want to edit and press submit!
+          <input type="text" name="studentidedit" placeholder="sXXXXXX"></input>
+          <input type="submit" name="submit" value="Submit"></input>
+          <br><br><br>
+        <tr>
+          <td>Student id</td>
+          <td><input type="text" name="studentid" value="<?php //echo $studentid; ?>"></input></td>
+        </tr>
+        <tr>
+          <td>Student name</td> 
+          <td><input type="text" name="name" value="<?php //echo $name; ?>"></input></td>
+        </tr>
+        <tr>
+          <td>Student email</td>
+          <td><input type="text" name="email" value="<?php //echo $email; ?>"></input></td>
+        </tr>
+        <tr>
+          <td>Study program</td>
+          <td><input type="text" name="program" value="<?php //echo $studyprogram; ?>"></input></td>
         </tr>
         <tr>
           <td>Submit changes</td>
@@ -95,7 +126,7 @@
 
 
     </form>
-    <br/>
+    <br/>-->
     <p>ps: It is only the data that has an input value that will change.</p>
     <p>If there is something you do not want to change, do not write anything in that input field.</p>
     <footer style="border-style: solid; text-align: center;">
