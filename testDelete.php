@@ -26,7 +26,7 @@
            
               $studentid = $_POST["studentid"];
               
-              $sql = "DELETE s.studentid, s.name, s.email, c.study_program
+              $sql = "DELETE s, c
               FROM students s
               JOIN courses c ON s.'$studentid' = c.'$studentid'
               WHERE s.studentid='$studentid' AND c.studentid='$studentid'";
