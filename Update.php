@@ -63,7 +63,7 @@
         <th>New information</th>
         
           Type in the student id of the student you want to edit and press submit!
-          <input type="text" name="studentidedit" value="sXXXXXX"></input>
+          <input type="text" name="studentidedit" placeholder="sXXXXXX"></input>
           <input type="submit" name="submit" value="Submit"></input>
           <br><br><br>
         <tr>
