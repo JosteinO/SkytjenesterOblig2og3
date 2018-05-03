@@ -1,5 +1,5 @@
 <?php
-include "Database.php";
+include "./Database.php";
 
 //checks if a post is set and performs the wanted function or prints the form
 if(isset($_POST["getStudent"])){

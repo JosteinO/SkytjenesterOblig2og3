@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 <?php
-include "Database.php";
+include "/Database.php";
 
 if(isset($_POST["update"])){
   $sql = lagSQL();
