@@ -39,7 +39,7 @@
         $antall_rader = $db->affected_rows;
     
 echo '
-    <table style="width:100%">
+    <br><br><table style="width:100%; border: collapse; border; border: 1px solid grey;">
   <tr>
     <th>Studentnr</th>
     <th>Name</th> 
