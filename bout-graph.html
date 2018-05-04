@@ -1,0 +1,243 @@
+<html>
+  <head>
+  <title>bonnie2gchart</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+
+      
+      function draw_blockio() {
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Tests');
+        
+        data.addColumn('number', 'comp1 1'); 
+        data.addColumn('number', 'comp1 2'); 
+        data.addColumn('number', 'comp1 3'); 
+        data.addColumn('number', 'comp1 4'); 
+        data.addColumn('number', 'comp1 5'); 
+        data.addColumn('number', 'comp1 6'); 
+        data.addColumn('number', 'comp1 7'); 
+        data.addColumn('number', 'comp1 8'); 
+        data.addColumn('number', 'comp1 9'); 
+        data.addColumn('number', 'comp1 10'); 
+        
+        data.addRows([['Seq Block Output', 306358, 323181, 320508, 307800, 221819, 306231, 323079, 318862, 309595, 297213]]); 
+        data.addRows([['Block Rewrite', 233247, 233405, 226663, 205739, 210227, 241218, 210775, 233660, 236188, 232285]]); 
+        data.addRows([['Block Input', 571585, 371581, 588186, 567777, 528348, 573373, 571096, 572954, 499603, 575366]]); 
+
+        var options = {
+          title: 'kB/sec (higher is better)',
+          vAxis: {title: 'Block IO',  titleTextStyle: {color: 'red'}}
+        };
+
+        var chart = new google.visualization.BarChart(document.getElementById('chart_div_blockio'));
+        chart.draw(data, options);
+      }
+      
+      function draw_metadata() {
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Tests');
+        
+        data.addColumn('number', 'comp1 1'); 
+        data.addColumn('number', 'comp1 2'); 
+        data.addColumn('number', 'comp1 3'); 
+        data.addColumn('number', 'comp1 4'); 
+        data.addColumn('number', 'comp1 5'); 
+        data.addColumn('number', 'comp1 6'); 
+        data.addColumn('number', 'comp1 7'); 
+        data.addColumn('number', 'comp1 8'); 
+        data.addColumn('number', 'comp1 9'); 
+        data.addColumn('number', 'comp1 10'); 
+        
+        data.addRows([['Seq Create', 1258, 1194, 1260, 1257, 1206, 1236, 1253, 1262, 1253, 1253]]); 
+        data.addRows([['Seq Delete', 1342, 1170, 1321, 1208, 1265, 1264, 1282, 1259, 1227, 1233]]); 
+        data.addRows([['Random Create', 1093, 1227, 1279, 1133, 1244, 1319, 1265, 1229, 1259, 1375]]); 
+        data.addRows([['Random Delete', 1235, 1272, 1273, 1275, 1269, 1282, 1274, 1317, 1232, 1417]]); 
+
+        var options = {
+          title: 'files/sec (higher is better)',
+          vAxis: {title: 'File metadata',  titleTextStyle: {color: 'red'}}
+        };
+
+        var chart = new google.visualization.BarChart(document.getElementById('chart_div_metadata'));
+        chart.draw(data, options);
+      }
+      
+      function draw_blockio_cpu() {
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Tests');
+        
+        data.addColumn('number', 'comp1 1'); 
+        data.addColumn('number', 'comp1 2'); 
+        data.addColumn('number', 'comp1 3'); 
+        data.addColumn('number', 'comp1 4'); 
+        data.addColumn('number', 'comp1 5'); 
+        data.addColumn('number', 'comp1 6'); 
+        data.addColumn('number', 'comp1 7'); 
+        data.addColumn('number', 'comp1 8'); 
+        data.addColumn('number', 'comp1 9'); 
+        data.addColumn('number', 'comp1 10'); 
+        
+        data.addRows([['Seq Block Output CPU', 28, 28, 29, 28, 28, 28, 29, 28, 26, 25]]); 
+        data.addRows([['Block Rewrite CPU', 26, 25, 25, 23, 32, 26, 26, 27, 27, 26]]); 
+        data.addRows([['Block Input CPU', 24, 15, 24, 25, 26, 24, 24, 24, 21, 24]]); 
+        data.addRows([['Random Seek CPU', 84, 87, 81, 93, 89, 83, 121, 81, 94, 75]]); 
+
+        var options = {
+          title: 'CPU usage in % (lower is better)',
+          vAxis: {title: 'Block IO CPU',  titleTextStyle: {color: 'red'}}
+        };
+
+        var chart = new google.visualization.BarChart(document.getElementById('chart_div_blockio-cpu'));
+        chart.draw(data, options);
+      }
+      
+      function draw_metadata_cpu() {
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Tests');
+        
+        data.addColumn('number', 'comp1 1'); 
+        data.addColumn('number', 'comp1 2'); 
+        data.addColumn('number', 'comp1 3'); 
+        data.addColumn('number', 'comp1 4'); 
+        data.addColumn('number', 'comp1 5'); 
+        data.addColumn('number', 'comp1 6'); 
+        data.addColumn('number', 'comp1 7'); 
+        data.addColumn('number', 'comp1 8'); 
+        data.addColumn('number', 'comp1 9'); 
+        data.addColumn('number', 'comp1 10'); 
+        
+        data.addRows([['Seq Create CPU', 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]]); 
+        data.addRows([['Seq Read', null, null, null, null, null, null, null, null, null, null]]); 
+        data.addRows([['Seq Delete CPU', 2, 3, 2, 3, 2, 2, 2, 2, 2, 2]]); 
+        data.addRows([['Random Create CPU', 4, 3, 3, 4, 3, 3, 3, 3, 3, 3]]); 
+        data.addRows([['Random Read CPU', null, null, null, null, null, null, null, null, null, null]]); 
+        data.addRows([['Random Delete CPU', 2, 3, 2, 3, 2, 2, 2, 2, 2, 3]]); 
+
+        var options = {
+          title: 'CPU usage in % (lower is better)',
+          vAxis: {title: 'Seq and Random CPU',  titleTextStyle: {color: 'red'}}
+        };
+
+        var chart = new google.visualization.BarChart(document.getElementById('chart_div_metadata-cpu'));
+        chart.draw(data, options);
+      }
+      
+      function draw_blockio_latency() {
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Tests');
+        
+        data.addColumn('number', 'comp1 1'); 
+        data.addColumn('number', 'comp1 2'); 
+        data.addColumn('number', 'comp1 3'); 
+        data.addColumn('number', 'comp1 4'); 
+        data.addColumn('number', 'comp1 5'); 
+        data.addColumn('number', 'comp1 6'); 
+        data.addColumn('number', 'comp1 7'); 
+        data.addColumn('number', 'comp1 8'); 
+        data.addColumn('number', 'comp1 9'); 
+        data.addColumn('number', 'comp1 10'); 
+        
+        data.addRows([['Latency Block Output', 69748000, 68091000, 72113000, 93229000, 603000000, 133000000, 42769000, 168000000, 55938000, 102000000]]); 
+        data.addRows([['Latency Rewrite', 138000000, 54086000, 126000000, 65149000, 53358000, 33946000, 47637000, 33421000, 30550000, 36519000]]); 
+        data.addRows([['Latency Input Block', 2089000, 4124000, 1592000, 2463000, 6449000, 5978000, 3209000, 2315000, 14393000, 2001000]]); 
+
+        var options = {
+          title: 'nanoseconds (lower is better)',
+          vAxis: {title: 'Block IO Latency',  titleTextStyle: {color: 'red'}}
+        };
+
+        var chart = new google.visualization.BarChart(document.getElementById('chart_div_blockio-latency'));
+        chart.draw(data, options);
+      }
+      
+      function draw_metadata_latency() {
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Tests');
+        
+        data.addColumn('number', 'comp1 1'); 
+        data.addColumn('number', 'comp1 2'); 
+        data.addColumn('number', 'comp1 3'); 
+        data.addColumn('number', 'comp1 4'); 
+        data.addColumn('number', 'comp1 5'); 
+        data.addColumn('number', 'comp1 6'); 
+        data.addColumn('number', 'comp1 7'); 
+        data.addColumn('number', 'comp1 8'); 
+        data.addColumn('number', 'comp1 9'); 
+        data.addColumn('number', 'comp1 10'); 
+        
+        data.addRows([['Latency Seq Create', 61604000, 28606000, 25399000, 56664000, 14063000, 55809000, 13839000, 3829000, 4378000, 13885000]]); 
+        data.addRows([['Latency Seq Delete', 52283000, 4871000, 4007000, 5627000, 2902000, 3123000, 3580000, 54359000, 2398000, 3944000]]); 
+        data.addRows([['Latency Random Create', 7694000, 4811000, 4835000, 39310000, 3540000, 2889000, 5597000, 3669000, 3470000, 56529000]]); 
+        data.addRows([['Latency Random Delete', 52647000, 6801000, 2639000, 51661000, 62617000, 56787000, 3633000, 2378000, 53521000, 5628000]]); 
+
+        var options = {
+          title: 'nanoseconds (lower is better)',
+          vAxis: {title: 'File metadata Latency',  titleTextStyle: {color: 'red'}}
+        };
+
+        var chart = new google.visualization.BarChart(document.getElementById('chart_div_metadata-latency'));
+        chart.draw(data, options);
+      }
+      
+      function draw_metadata_read_latency() {
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Tests');
+        
+        data.addColumn('number', 'comp1 1'); 
+        data.addColumn('number', 'comp1 2'); 
+        data.addColumn('number', 'comp1 3'); 
+        data.addColumn('number', 'comp1 4'); 
+        data.addColumn('number', 'comp1 5'); 
+        data.addColumn('number', 'comp1 6'); 
+        data.addColumn('number', 'comp1 7'); 
+        data.addColumn('number', 'comp1 8'); 
+        data.addColumn('number', 'comp1 9'); 
+        data.addColumn('number', 'comp1 10'); 
+        
+        data.addRows([['Latency Seq Read', 308000, 277000, 1024000, 318000, 277000, 288000, 324000, 271000, 279000, 352000]]); 
+        data.addRows([['Latency Random Read', 62000, 46000, 5000, 62000, 40000, 290000, 36000, 242000, 43000, 43000]]); 
+
+        var options = {
+          title: 'nanoseconds (lower is better)',
+          vAxis: {title: 'File metadata (read) Latency',  titleTextStyle: {color: 'red'}}
+        };
+
+        var chart = new google.visualization.BarChart(document.getElementById('chart_div_metadata-read-latency'));
+        chart.draw(data, options);
+      }
+      
+
+      function drawChart() {
+      
+        draw_blockio();
+        draw_metadata();
+        draw_blockio_cpu();
+        draw_metadata_cpu();
+        draw_blockio_latency();
+        draw_metadata_latency();
+        draw_metadata_read_latency();
+      }
+    </script>
+  </head>
+
+  <body>
+    
+    <h2>Block IO</h2>
+    <div id="chart_div_blockio" style="width: 900px; height: 500px;"></div> 
+    <h2>File metadata</h2>
+    <div id="chart_div_metadata" style="width: 900px; height: 500px;"></div> 
+    <h2>Block IO CPU</h2>
+    <div id="chart_div_blockio-cpu" style="width: 900px; height: 500px;"></div> 
+    <h2>Seq and Random CPU</h2>
+    <div id="chart_div_metadata-cpu" style="width: 900px; height: 500px;"></div> 
+    <h2>Block IO Latency</h2>
+    <div id="chart_div_blockio-latency" style="width: 900px; height: 500px;"></div> 
+    <h2>File metadata Latency</h2>
+    <div id="chart_div_metadata-latency" style="width: 900px; height: 500px;"></div> 
+    <h2>File metadata (read) Latency</h2>
+    <div id="chart_div_metadata-read-latency" style="width: 900px; height: 500px;"></div> 
+  </body>
+</html>
