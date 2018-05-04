@@ -1,10 +1,14 @@
 <html>
+<head>
+  <link rel="stylesheet" href="Stylesheet.css">
+</head>
   <body>
-    <div class="footer">
+    <footer>
       <?php
-      echo "Server IP: ".$_SERVER['SERVER_ADDR']." <br/> ".
-        "Portnumber: ".$_SERVER['SERVER_PORT'];
+      echo "Server IP and Portnumber: ".$_SERVER['SERVER_ADDR'].":".$_SERVER['SERVER_PORT']."<br/>".
+        "Hostname: ".gethostname();
+
       ?>
-    </div>
+    </footer>
   </body>
 </html>

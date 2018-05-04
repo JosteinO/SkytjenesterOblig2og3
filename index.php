@@ -9,17 +9,30 @@ and open the template in the editor.
         <meta charset="UTF-8">
         <title></title>
     </head>
+    <div id="container">
     <body>
-        <h2>Welcome - Please pick an option below</h2><hr>
+      <div id="header">
+        <h2>Welcome - Please pick an option below</h2>
+      </div>
+      <div id="body">
+        <table>
+          <tr>
+        <td>Create a student:</td> <td><a href="/createStudent.php">Click here</a></td>
+      </tr>
+      <tr>
+        <td>View all students: </td> <td><a href="/retrieveInfo.php">Click here</a></td>
+      </tr>
+          <tr>
+        <td>Delete a student: </td> <td><a href="/deleteStudent.php">Click here</a></td>
+      </tr>
 
-        Create a student: <a href="/createStudent.php">Click here</a><br><br>
-        View all students: <a href="/retrieveInfo.php">Click here</a><br><br>
-        Delete a student: <a href="/deleteStudent.php">Click here</a><br><br>
 
-        <br><hr><br><br>
+      </div>
+      <div id="footer">
         <?php
-        echo "Server IP: ".$_SERVER['SERVER_ADDR']." <br/> ".
-             "Portnumber: ".$_SERVER['SERVER_PORT'];
+        include "Footer.php";
         ?>
+      </div>
     </body>
+    </div
 </html>
