@@ -24,7 +24,9 @@ echo "sjekket forbindelse <br/>";
   LEFT JOIN courses c ON s.studentid = c.studentid
   WHERE s.studentid = ".$sid;
 echo "Laget sql setning <br/>";
-  $resultat = $db->query($sql);
+  if(!$resultat = $db->query($sql);){
+    echo("Error description: " . mysqli_error($db));
+  }
 echo "utført sql <br/>";
   $rad = $resultat->fetch_object();
 echo "hentet objekter <br>";
