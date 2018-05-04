@@ -7,6 +7,7 @@
    table, th, td {
     border: 1px solid black;
     border-collapse: collapse;
+    width: 100%;
 }
 </style>
   </style>
