@@ -21,10 +21,9 @@
        This is the students saved in the db cluster
      </div>
      <div id="body">
-      <form>
-       <input type="submit" value="Back to navigation-page" name="toIndex"></input>
-       <input type="submit" value="Edit student" name="toEdit"></input>
-      </form>
+      
+      <a href="/index.php"> To index </a> <br>
+      <a href="/NewUpdate.php"> Update student </a>
 
 
       <?php
@@ -76,12 +75,6 @@ echo '
 
         $db->close();
 
-        if(isset($_POST["toIndex"])){
-          header("Location: index.php");
-        }
-        if(isset($_POST["toEdit"])){
-          header("Location: NewUpdate.php");
-        }
         ?>
         </div>
         <div id="footer">
