@@ -43,19 +43,19 @@ echo "hentet objekter <br>";
   //$studyprogram =  $rad->study_program;
 echo "lagt objekter i variabler, nå kommer html <br>";
 
-$db = new mysqli($servername, $username, $password, $dbname);
+$db2 = new mysqli($servername, $username, $password, $dbname);
 echo "kobler til server <br/>";
 // Check connection
-if ($db->connect_error) {
+if ($db2->connect_error) {
   die("Connection failed: " . $db->connect_error);
 }
 
-$resultat2 = $db->query($sql2);
+$resultat2 = $db2->query($sql2);
 
-echo("Error description: " . mysqli_error($db));
+echo("Error description: " . mysqli_error($db2));
 
 $rad2 = $resultat2->fetch_object();
-$antall_rader = $db->affected_rows;
+$antall_rader = $db2->affected_rows;
 echo $antall_rader;
 
 $studyprogram =  $rad2->study_program;
