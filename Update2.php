@@ -26,9 +26,8 @@ echo "sjekket forbindelse <br/>";
 echo "Laget sql setning <br/>";
 
   $resultat = $db->query($sql);
-  if(!isset($resultat)){
+
     echo("Error description: " . mysqli_error($db));
-  }
 
 echo "utført sql <br/>";
   $rad = $resultat->fetch_object();
