@@ -10,29 +10,29 @@
   $username = "dats20";
   $password = "passord";
   $dbname = "studentinfo";
-echo "laget server variabler";
+echo "laget server variabler <br/>";
   // Create connection
   $db = new mysqli($servername, $username, $password, $dbname);
-echo "kobler til server";
+echo "kobler til server <br/>";
   // Check connection
   if ($db->connect_error) {
     die("Connection failed: " . $db->connect_error);
   }
-echo "sjekket forbindelse";
+echo "sjekket forbindelse <br/>";
   $sql = "SELECT s.studentid, s.name, s.email, c.study_program
   FROM students s
   LEFT JOIN courses c ON s.studentid = c.studentid
   WHERE s.studentid = ".$sid;
-echo "Laget sql setning";
+echo "Laget sql setning <br/>";
   $resultat = $db->query($sql);
-echo "utført sql";
+echo "utført sql <br/>";
   $rad = $resultat->fetch_object();
-echo "hentet objekter";
+echo "hentet objekter <br>";
   $studentid =  $rad->studentid;
   $name =  $rad->name;
   $email =  $rad->email;
   $studyprogram =  $rad->study_program;
-echo "lagt objekter i variabler, nå kommer html";
+echo "lagt objekter i variabler, nå kommer html <br>";
   ?>
 
   <form action="Update3.php" method="get">
