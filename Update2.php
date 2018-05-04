@@ -19,10 +19,11 @@ echo "kobler til server <br/>";
     die("Connection failed: " . $db->connect_error);
   }
 echo "sjekket forbindelse <br/>";
-  $sql = "SELECT s.studentid, s.name, s.email, c.study_program
-  FROM students s
-  LEFT JOIN courses c ON s.studentid = c.studentid
-  WHERE s.studentid = ".$sid;
+
+  $sql = "SELECT studentid, name, email, study_program
+  FROM students
+  Where studentid = ''".$sid."'';";
+
 echo "Laget sql setning <br/>";
 
   $resultat = $db->query($sql);
@@ -35,7 +36,7 @@ echo "hentet objekter <br>";
   $studentid =  $rad->studentid;
   $name =  $rad->name;
   $email =  $rad->email;
-  $studyprogram =  $rad->study_program;
+  //$studyprogram =  $rad->study_program;
 echo "lagt objekter i variabler, nå kommer html <br>";
   ?>
 
@@ -43,7 +44,7 @@ echo "lagt objekter i variabler, nå kommer html <br>";
     <input type="text" name="studentid" value="<?php echo $studentid; ?>">
     <input type="text" name="name" value="<?php echo $name; ?>">
     <input type="text" name="email" value="<?php echo $email; ?>">
-    <input type="text" name="studyprogram" value="<?php echo $studyProgram ?>">
+    <!-- <input type="text" name="studyprogram" value="<?php //echo $studyProgram ?>"> -->
     <input type="submit" name="submit">
   </form>
 
