@@ -17,7 +17,6 @@ $name = $_GET["name"];
 $email = $_GET["email"];
 $studyprogram = $_GET["studyprogram"];
 
-echo $sid;
 
 $sql1 = "UPDATE students
 SET name = '".$name."', email = '".$email."'
@@ -27,7 +26,7 @@ $sql2 = "UPDATE courses
 SET study_program ='".$studyprogram."'".
 "WHERE studentid = '".$sid."';";
 
-$resultat = $db->query($sql);
+$resultat = $db->query($sql1);
 
 if(!$resultat){
   die("Klarte ikke å oppdatere students");
