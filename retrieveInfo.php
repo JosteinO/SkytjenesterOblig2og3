@@ -3,6 +3,13 @@
  <head>
    <meta charset="utf-8">
    <title>Retrieve Info</title>
+  <style>
+   table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+</style>
+  </style>
  </head>
  <div id="container">
 
@@ -39,7 +46,7 @@
         $antall_rader = $db->affected_rows;
     
 echo '
-    <br><br><table style="width:100%; border-collapse: collapse; border: 1px solid grey;">
+    <br><br><table>
   <tr>
     <th>Studentnr</th>
     <th>Name</th> 
