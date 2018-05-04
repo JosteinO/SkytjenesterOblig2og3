@@ -24,6 +24,10 @@ echo "sjekket forbindelse <br/>";
   FROM students
   WHERE studentid = '".$sid."';";
 
+  $sql2 = "SELECT study_program
+  FROM courses
+  WHERE studentid = '".$sid."';";
+
 echo "Laget sql setning <br/>";
 
   $resultat = $db->query($sql);
@@ -38,13 +42,22 @@ echo "hentet objekter <br>";
   $email =  $rad->email;
   //$studyprogram =  $rad->study_program;
 echo "lagt objekter i variabler, nå kommer html <br>";
+
+$resultat2 = $db->query($sql2);
+
+echo("Error description: " . mysqli_error($db));
+
+$rad2 = $resultat2->fetch_object();
+
+$studyprogram =  $rad2->study_program;
+
   ?>
 
   <form action="Update3.php" method="get">
     <input type="text" name="studentid" value="<?php echo $studentid; ?>">
     <input type="text" name="name" value="<?php echo $name; ?>">
     <input type="text" name="email" value="<?php echo $email; ?>">
-    <!-- <input type="text" name="studyprogram" value="<?php //echo $studyProgram ?>"> -->
+    <input type="text" name="studyprogram" value="<?php echo $studyProgram ?>">
     <input type="submit" name="submit">
   </form>
 
