@@ -7,7 +7,6 @@
    table, th, td {
     border: 1px solid black;
     border-collapse: collapse;
-    width: 100%;
 }
 </style>
   </style>
@@ -21,6 +20,7 @@
      <div id="body">
       <form action="" method="post">
        <input type="submit" value="Back to navigation-page" name="toIndex"></input>
+       <input type="submit" value="Edit student" name="toEdit"></input>
       </form>
 
       <?php
@@ -74,6 +74,9 @@ echo '
 
         if(isset($_POST["toIndex"])){
           header("Location: index.php");
+        }
+        if(isset($_POST["toEdit"])){
+          header("Location: NewUpdate.php");
         }
         ?>
         </div>
