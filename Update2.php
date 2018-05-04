@@ -5,35 +5,34 @@
 <body>
   <?php
   $sid = $_GET["sid"];
-  echo $sid;
 
   $servername = "10.10.2.5";
   $username = "dats20";
   $password = "passord";
   $dbname = "studentinfo";
-
+echo "laget server variabler";
   // Create connection
   $db = new mysqli($servername, $username, $password, $dbname);
-
+echo "kobler til server";
   // Check connection
   if ($db->connect_error) {
     die("Connection failed: " . $db->connect_error);
   }
-
+echo "sjekket forbindelse";
   $sql = "SELECT s.studentid, s.name, s.email, c.study_program
   FROM students s
   LEFT JOIN courses c ON s.studentid = c.studentid
   WHERE s.studentid = ".$sid;
-
+echo "Laget sql setning";
   $resultat = $db->query($sql);
-
+echo "utført sql";
   $rad = $resultat->fetch_object();
-
+echo "hentet objekter";
   $studentid =  $rad->studentid;
   $name =  $rad->name;
   $email =  $rad->email;
   $studyprogram =  $rad->study_program;
-
+echo "lagt objekter i variabler, nå kommer html";
   ?>
 
   <form action="Update3.php" method="get">
