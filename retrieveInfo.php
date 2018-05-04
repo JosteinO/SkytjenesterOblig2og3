@@ -3,6 +3,16 @@
  <head>
    <meta charset="utf-8">
    <title>Retrieve Info</title>
+  <style>
+   table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+   table {
+    width: 100%;
+}
+</style>
+  </style>
  </head>
  <div id="container">
 
@@ -11,9 +21,11 @@
        This is the students saved in the db cluster
      </div>
      <div id="body">
-      <form action="" method="post">
+      <form>
        <input type="submit" value="Back to navigation-page" name="toIndex"></input>
+       <input type="submit" value="Edit student" name="toEdit"></input>
       </form>
+
 
       <?php
 
@@ -39,7 +51,7 @@
         $antall_rader = $db->affected_rows;
     
 echo '
-    <table style="width:100%">
+    <br><br><table>
   <tr>
     <th>Studentnr</th>
     <th>Name</th> 
@@ -66,6 +78,9 @@ echo '
 
         if(isset($_POST["toIndex"])){
           header("Location: index.php");
+        }
+        if(isset($_POST["toEdit"])){
+          header("Location: NewUpdate.php");
         }
         ?>
         </div>
