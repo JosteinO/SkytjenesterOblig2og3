@@ -21,10 +21,9 @@
        This is the students saved in the db cluster
      </div>
      <div id="body">
-      <form action="" method="post">
-       <input type="submit" value="Back to navigation-page" name="toIndex"></input>
-       <input type="submit" value="Edit student" name="toEdit"></input>
-      </form>
+      <input type="submit" value="Back to navigation-page" name="toIndex"></input>
+      <input type="submit" value="Edit student" name="toEdit"></input>
+
 
       <?php
 
