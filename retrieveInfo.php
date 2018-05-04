@@ -37,21 +37,30 @@
         $resultat = $db->query($sql);
 
         $antall_rader = $db->affected_rows;
+    
+echo '
+    <table style="width:100%">
+  <tr>
+    <th>Studentnr</th>
+    <th>Name</th> 
+    <th>Mail</th>
+    <th>Studyprogram</th>
+  </tr>
+';
 
 
         for ($i = 0; $i < $antall_rader; $i++) {
           $rad = $resultat->fetch_object();
           if($rad > 0){
-            $studentid = "StudentID: " . $rad->studentid;
-            $name = "Name: " . $rad->name;
-            $email = "Email: " . $rad->email;
-            $studyprogram = "Studyprogram: " . $rad->study_program;
-            echo $studentid . "<br>";
-            echo $name . "<br>";
-            echo $email . "<br>";
-            echo $studyprogram . "<br><br>";
+           echo '<tr>
+              <td>' . $rad->studentid . '</td> 
+              <td>' . $rad->name . '</td> 
+              <td>' . $rad->email . '</td> 
+              <td>' . $rad->study_program . '</td> 
+              </tr>';
           }
         }
+    echo '</table>';
 
         $db->close();
 
