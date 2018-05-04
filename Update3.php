@@ -17,6 +17,8 @@ $name = $_GET["name"];
 $email = $_GET["email"];
 $studyprogram = $_GET["studyprogram"];
 
+echo $sid;
+
 $sql1 = "UPDATE students
 SET name = '".$name."', email = '".$email."'
 WHERE studentid = '".$sid."';";
