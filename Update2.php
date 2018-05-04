@@ -22,7 +22,7 @@ echo "sjekket forbindelse <br/>";
 
   $sql = "SELECT studentid, name, email
   FROM students
-  Where studentid = ''".$sid."'';";
+  WHERE studentid = '".$sid."';";
 
 echo "Laget sql setning <br/>";
 
