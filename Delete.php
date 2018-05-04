@@ -34,6 +34,24 @@ function getStudent(){//This method searches the database for the wanted student
 
    $resultat = $db->query($sql);
 
+   $resultat = $db->query($sql);
+
+   $antall_rader = $db->affected_rows;
+
+
+   for ($i = 0; $i < $antall_rader; $i++) {
+     $rad = $resultat->fetch_object();
+     if($rad > 0){
+       $studentid = "StudentID: " . $rad->studentid;
+       $name = "Name: " . $rad->name;
+       $email = "Email: " . $rad->email;
+       $studyprogram = "Studyprogram: " . $rad->study_program;
+       echo $studentid . "<br>";
+       echo $name . "<br>";
+       echo $email . "<br>";
+       echo $studyprogram . "<br><br>";
+     }
+   }
   //if($rad>0){
     $studentid = $rad->studentid;
     $studentid2 = $result[0];
