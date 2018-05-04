@@ -8,6 +8,9 @@
     border: 1px solid black;
     border-collapse: collapse;
 }
+   table {
+    width: 100%;
+}
 </style>
   </style>
  </head>
