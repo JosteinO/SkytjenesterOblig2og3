@@ -1,12 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Update status</title>
+</head>
+<div id="container">
+<body>
+  <div id="header">
+    <h2>Update status</h2>
+  </div>
+  <div id="body">
+</body>
+</html>
+
 <?php
 $servername = "10.10.2.5";
 $username = "dats20";
 $password = "passord";
 $dbname = "studentinfo";
-echo "laget server variabler <br/>";
+
 // Create connection
 $db = new mysqli($servername, $username, $password, $dbname);
-echo "kobler til server <br/>";
+
 // Check connection
 if ($db->connect_error) {
   die("Connection failed: " . $db->connect_error);
@@ -42,3 +56,12 @@ echo "Students and courses have been updated!";
 echo "<br> <a href='/retrieveinfo.php'>Click here to see all students</a>";
 
 ?>
+</div>
+<div id="footer">
+  <?php
+  include "Footer.php";
+  ?>
+</div>
+</body>
+</div>
+</html>

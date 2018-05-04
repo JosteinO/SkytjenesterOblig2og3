@@ -2,7 +2,12 @@
 <html>
 <head>
 </head>
+<div id="container">
 <body>
+  <div id="header">
+    <h2>Edit information</h2>
+  </div>
+  <div id="body">
   <?php
   $sid = $_GET["sid"];
 
@@ -10,15 +15,15 @@
   $username = "dats20";
   $password = "passord";
   $dbname = "studentinfo";
-echo "laget server variabler <br/>";
+
   // Create connection
   $db = new mysqli($servername, $username, $password, $dbname);
-echo "kobler til server <br/>";
+
   // Check connection
   if ($db->connect_error) {
     die("Connection failed: " . $db->connect_error);
   }
-echo "sjekket forbindelse <br/>";
+
 
   $sql = "SELECT studentid, name, email
   FROM students
@@ -28,23 +33,23 @@ echo "sjekket forbindelse <br/>";
   FROM courses
   WHERE studentid = '".$sid."';";
 
-echo "Laget sql setning <br/>";
+
 
   $resultat = $db->query($sql);
 
     echo("Error description: " . mysqli_error($db));
 
-echo "utført sql <br/>";
+
   $rad = $resultat->fetch_object();
-echo "hentet objekter <br>";
+
   $studentid =  $rad->studentid;
   $name =  $rad->name;
   $email =  $rad->email;
   //$studyprogram =  $rad->study_program;
-echo "lagt objekter i variabler, nå kommer html <br>";
+
 
 $db2 = new mysqli($servername, $username, $password, $dbname);
-echo "kobler til server <br/>";
+
 // Check connection
 if ($db2->connect_error) {
   die("Connection failed: " . $db->connect_error);
@@ -69,6 +74,12 @@ $studyprogram =  $rad2->study_program;
     <input type="text" name="studyprogram" value="<?php echo $studyprogram; ?>">
     <input type="submit" name="submit">
   </form>
-
+</div>
+<div id="footer">
+  <?php
+  include "Footer.php";
+  ?>
+</div>
 </body>
+</div>
 </html>
