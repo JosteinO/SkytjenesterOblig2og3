@@ -31,7 +31,7 @@ echo "sjekket forbindelse <br/>";
 echo "Laget sql setning <br/>";
 
   $resultat = $db->query($sql);
-
+  $resultat2 = $db->query($sql2);
     echo("Error description: " . mysqli_error($db));
 
 echo "utført sql <br/>";
@@ -43,7 +43,7 @@ echo "hentet objekter <br>";
   //$studyprogram =  $rad->study_program;
 echo "lagt objekter i variabler, nå kommer html <br>";
 
-$resultat2 = $db->query($sql2);
+//$resultat2 = $db->query($sql2);
 
 echo("Error description: " . mysqli_error($db));
 
