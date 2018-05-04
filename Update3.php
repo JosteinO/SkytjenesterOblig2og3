@@ -53,7 +53,7 @@ if(!$resultat2){
 }
 
 echo "Students and courses have been updated!";
-echo "<br> <a href='/retrieveinfo.php'>Click here to see all students</a>";
+echo "<br> <a href='/retrieveInfo.php'>Click here to see all students</a>";
 
 ?>
 </div>

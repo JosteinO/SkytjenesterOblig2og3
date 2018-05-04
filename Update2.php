@@ -37,9 +37,6 @@
 
   $resultat = $db->query($sql);
 
-    echo("Error description: " . mysqli_error($db));
-
-
   $rad = $resultat->fetch_object();
 
   $studentid =  $rad->studentid;
@@ -56,8 +53,6 @@ if ($db2->connect_error) {
 }
 
 $resultat2 = $db2->query($sql2);
-
-echo("Error description: " . mysqli_error($db2));
 
 $rad2 = $resultat2->fetch_object();
 $antall_rader = $db2->affected_rows;
