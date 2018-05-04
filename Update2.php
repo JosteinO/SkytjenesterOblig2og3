@@ -63,7 +63,7 @@ $studyprogram =  $rad2->study_program;
   ?>
 
   <form action="Update3.php" method="get">
-    <input type="text" name="studentid" value="<?php echo $studentid; ?>">
+    <input type="text" name="sid" value="<?php echo $studentid; ?>">
     <input type="text" name="name" value="<?php echo $name; ?>">
     <input type="text" name="email" value="<?php echo $email; ?>">
     <input type="text" name="studyprogram" value="<?php echo $studyprogram; ?>">
