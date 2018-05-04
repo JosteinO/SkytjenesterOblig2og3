@@ -1,13 +1,30 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <title>Update student information</title>
 </head>
+<div id="container">
 <body>
-  <p>Choose student to edit</p>
-  <form action="Update2.php" method="get">
-    <input type="text" name="sid">
-    <input type="submit" name="submit">
-  </form>
+  <div id="header">
+    <h2>Update student information</h2>
+  </div>
+  <div id="body">
+    <p>Type inn the student ID of the student you want to edit.</p>
+    <table>
+    <form action="Update2.php" method="get">
+      <tr>
+        <td>Student id</td>
+      <td><input type="text" name="sid"></td>
+      <td><input type="submit" name="submit"></td>
+    </form>
+  </table>
+  </div>
 
+<div id="footer">
+  <?php
+  include "Footer.php";
+  ?>
+</div>
 </body>
+</div>
 </html>

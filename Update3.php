@@ -29,15 +29,16 @@ SET study_program ='".$studyprogram."'".
 $resultat = $db->query($sql1);
 
 if(!$resultat){
-  die("Klarte ikke å oppdatere students");
+  die("Failed to update the table students");
 }
 
 $resultat2 = $db->query($sql2);
 
 if(!$resultat2){
-  die("Klarte ikke å oppdatere courses");
+  die("Failed to update the table courses, but succeeded to update students table");
 }
 
-echo "Students and courses have been updated";
+echo "Students and courses have been updated!";
+echo "<br> <a href='/retrieveinfo.php'>Click here to see all students</a>";
 
 ?>
