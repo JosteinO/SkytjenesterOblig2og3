@@ -55,6 +55,8 @@ $resultat2 = $db->query($sql2);
 echo("Error description: " . mysqli_error($db));
 
 $rad2 = $resultat2->fetch_object();
+$antall_rader = $db->affected_rows;
+echo $antall_rader;
 
 $studyprogram =  $rad2->study_program;
 
