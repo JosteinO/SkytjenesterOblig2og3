@@ -22,7 +22,7 @@
      </div>
      <div id="body">
       
-      <a href="/index.php"> To index </a>
+      <a href="/index.php"> To index </a> <br>
       <a href="/NewUpdate.php"> Update student </a>
 
 
