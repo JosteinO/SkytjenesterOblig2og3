@@ -20,7 +20,7 @@ echo "kobler til server <br/>";
   }
 echo "sjekket forbindelse <br/>";
 
-  $sql = "SELECT studentid, name, email, study_program
+  $sql = "SELECT studentid, name, email
   FROM students
   Where studentid = ''".$sid."'';";
 
