@@ -46,14 +46,29 @@ $rad2 = $resultat2->fetch_object();
 $studyprogram =  $rad2->study_program;
 
   ?>
-
-  <form action="Update3.php" method="get">
-    <input type="text" name="sid" value="<?php echo $studentid; ?>">
-    <input type="text" name="name" value="<?php echo $name; ?>">
-    <input type="text" name="email" value="<?php echo $email; ?>">
-    <input type="text" name="studyprogram" value="<?php echo $studyprogram; ?>">
-    <input type="submit" name="submit">
+  <table>
+    <tr>
+    <form action="Update3.php" method="get">
+      <td>Student ID</td>
+      <td><input type="text" name="sid" value="<?php echo $studentid; ?>"></td>
+    </tr>
+    <tr>
+      <td>Name</td>
+      <td><input type="text" name="name" value="<?php echo $name; ?>"></td>
+    </tr>
+    <tr>
+      <td>Email</td>
+      <td><input type="text" name="email" value="<?php echo $email; ?>"></td>
+    </tr>
+    <tr>
+      <td>Studyprogram</td>
+      <td><input type="text" name="studyprogram" value="<?php echo $studyprogram; ?>"></td>
+    </tr>
+    <tr>
+    <td><input type="submit" name="Submit" value="Submit changes"></td>
+    </tr>
   </form>
+</table>
 </div>
 <div id="footer">
   <?php
