@@ -11,10 +11,10 @@ if (isset($_REQUEST["createStudent"])) {
   echo "$studentID <br>" . "$name <br>" . " $email <br>" . "$studyprog";
 
   $sql = "INSERT INTO studentinfo.students (studentid, name, email) VALUES"
-  . "('$studentID', '$name', '$email')";
+  ."('".$studentID."', '".$name."', '".$email."');";
 
   $sql2 = "INSERT INTO studentinfo.courses (study_program, studentid) VALUES"
-  ."('$studyprog', '$studentID')";
+  ."('".$studyprog."', '".$studentID."');";
 
   $result = $db->query($sql);
   $result2 = $db->query($sql2);
