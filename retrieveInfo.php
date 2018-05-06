@@ -55,8 +55,8 @@ echo '
           $rad = $resultat->fetch_object();
           if($rad > 0){
             $SID = $rad->studentid;
-            $uLink = "<a href='/Update2?SID=".$SID."'>Update</a>";
-            $dLink = "<a href='/deleteStudent?SID=".$SID."'>Delete</a>";
+            $uLink = "<a href='/Update2.php?SID=".$SID."'>Update</a>";
+            $dLink = "<a href='/deleteStudent.php?SID=".$SID."'>Delete</a>";
            echo '<tr>
               <td>' . $SID. '</td>
               <td>' . $rad->name . '</td>
