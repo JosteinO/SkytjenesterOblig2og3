@@ -11,20 +11,21 @@
      </div>
      <div id="body">
        <p>Type in studentID for the student you want to delete below</p>
-      <form action="" method="post">
-        <table>
+       <table>
+         <form action="" method="post">
           <tr>
             <td>StudentID:</td>
             <td><input type="text" name="studentid" placeholder="sXXXXXX" <?php checkGet(); ?>></input></td>
           </tr>
           <tr>
             <td><input type="submit" value="Delete student" name="delete"></input></td>
-        <form action="index.php" method="post">
-          <td><input type="submit" value="Back to navigation-page" name="toIndex"></input></td>
-        </tr>
-      </table>
         </form>
-      </form>
+        <form action="index.php" method="post">
+            <td><input type="submit" value="Back to navigation-page"></input></td>
+          </tr>
+        </form>
+        </table>
+
 
       <?php
       function checkGet(){
