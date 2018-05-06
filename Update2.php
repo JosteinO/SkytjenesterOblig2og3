@@ -9,7 +9,12 @@
   </div>
   <div id="body">
   <?php
-  $sid = $_GET["SID"];
+  if (isset($_GET["SID"])){
+    $sid = $_GET["SID"];
+  }
+  else{
+    die("No student selected.");
+  }
 
   include "Database.php";
   $db = dbConnect();
@@ -34,19 +39,9 @@
   $email =  $rad->email;
   //$studyprogram =  $rad->study_program;
 
-
-$db2 = new mysqli($servername, $username, $password, $dbname);
-
-// Check connection
-if ($db2->connect_error) {
-  die("Connection failed: " . $db->connect_error);
-}
-
-$resultat2 = $db2->query($sql2);
+$resultat2 = $db->query($sql2);
 
 $rad2 = $resultat2->fetch_object();
-$antall_rader = $db2->affected_rows;
-echo $antall_rader;
 
 $studyprogram =  $rad2->study_program;
 
