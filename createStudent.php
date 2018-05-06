@@ -1,39 +1,30 @@
 <?php
 
 if (isset($_REQUEST["createStudent"])) {
-$servername = "10.10.2.5";
-$username = "dats20";
-$password = "passord";
-$dbname = "studentinfo";
+  include "Database.php";
+  $db = dbConnect();
 
-// Create connection
-$db = new mysqli($servername, $username, $password, $dbname);
+  $studentID = $_REQUEST["studentid"];
+  $name = $_REQUEST["name"];
+  $email = $_REQUEST["email"];
+  $studyprog = $_REQUEST["studyprogram"];
+  echo "$studentID <br>" . "$name <br>" . " $email <br>" . "$studyprog";
 
-// Check connection
-if ($db->connect_error) {
-    die("Connection failed: " . $db->connect_error);
-}
+  $sql = "INSERT INTO studentinfo.students (studentid, name, email) VALUES"
+  . "('$studentID', '$name', '$email')";
 
-$studentID = $_REQUEST["studentid"];
-$name = $_REQUEST["name"];
-$email = $_REQUEST["email"];
-$studyprog = $_REQUEST["studyprogram"];
-echo "$studentID <br>" . "$name <br>" . " $email <br>" . "$studyprog";
+  $sql2 = "INSERT INTO studentinfo.courses (study_program, studentid) VALUES"
+  ."('$studyprog', '$studentID')";
 
-$sql = "INSERT INTO studentinfo.students (studentid, name, email) VALUES"
-            . "('$studentID', '$name', '$email')";
-
-$sql2 = "INSERT INTO studentinfo.courses (study_program, studentid) VALUES"
-            . "('$studyprog', '$studentID')";
-
-      $result = $db->query($sql);
-      $result2 = $db->query($sql2);
+  $result = $db->query($sql);
+  $result2 = $db->query($sql2);
 
   if ($result ||  $result2) {
       header("Location: /retrieveInfo.php");
       exit;
-    } else {
-        echo "Error in DB: " . $db->error;
+    }
+    else {
+      echo "Error in DB: " . $db->error;
     }
 
    $db->close();

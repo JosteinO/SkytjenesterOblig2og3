@@ -26,7 +26,7 @@ and open the template in the editor.
         <td>Delete a student: </td> <td><a href="/deleteStudent.php">Click here</a></td>
       </tr>
       <tr>
-        <td>Update a student </td> <td><a href="/NewUpdate.php">Click here</a></td>
+        <td>Update a student </td> <td><a href="/Update.php">Click here</a></td>
       </tr>
 
 

@@ -14,17 +14,17 @@
     <form action="Update2.php" method="get">
       <tr>
         <td>Student id</td>
-      <td><input type="text" name="sid"></td>
+      <td><input type="text" name="SID"></td>
       <td><input type="submit" name="submit"></td>
     </form>
   </table>
   </div>
 
-<div id="footer">
-  <?php
-  include "Footer.php";
-  ?>
-</div>
+  <div id="footer">
+    <?php
+    include "Footer.php";
+    ?>
+  </div>
 </body>
 </div>
 </html>

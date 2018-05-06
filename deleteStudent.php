@@ -10,27 +10,32 @@
        <h2>Delete a student</h2>
      </div>
      <div id="body">
+       <p>Type in studentID for the student you want to delete below</p>
       <form action="" method="post">
-        Type in studentid for the student you want to delete: <input type="text" name="studentid" placeholder="sXXXXXX"></input>
-        <input type="submit" value="Delete student" name="delete"></input>
-        <form action="" method="post">
-          <input type="submit" value="Back to navigation-page" name="toIndex"></input>
+        <table>
+          <tr>
+            <td>StudentID:</td>
+            <td><input type="text" name="studentid" placeholder="sXXXXXX" <?php checkGet(); ?>></input></td>
+          </tr>
+          <tr>
+            <td><input type="submit" value="Delete student" name="delete"></input></td>
+        <form action="index.php" method="post">
+          <td><input type="submit" value="Back to navigation-page" name="toIndex"></input></td>
+        </tr>
+      </table>
         </form>
       </form>
 
       <?php
+      function checkGet(){
+        if(isset($_GET["SID"])){
+          echo 'value="'.$_GET["SID"].'"';
+        }
+      }
 
       if(isset($_POST["delete"])){
-        $servername = "10.10.2.5";
-        $username = "dats20";
-        $password = "passord";
-        $dbname = "studentinfo";
-        // Create connection
-        $db = new mysqli($servername, $username, $password, $dbname);
-        // Check connection
-        if ($db->connect_error) {
-          die("Connection failed: " . $db->connect_error);
-        }
+        include "Database.php";
+        $db = dbConnect();
 
         $studentid = $_POST["studentid"];
 
@@ -53,10 +58,6 @@
 
         echo $studentid . " is now deleted!";
         $db->close();
-      }
-
-      if(isset($_POST["toIndex"])){
-        header("Location: index.php");
       }
       ?>
   </div>

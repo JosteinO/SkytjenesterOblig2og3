@@ -9,20 +9,10 @@
   </div>
   <div id="body">
   <?php
-  $sid = $_GET["sid"];
+  $sid = $_GET["SID"];
 
-  $servername = "10.10.2.5";
-  $username = "dats20";
-  $password = "passord";
-  $dbname = "studentinfo";
-
-  // Create connection
-  $db = new mysqli($servername, $username, $password, $dbname);
-
-  // Check connection
-  if ($db->connect_error) {
-    die("Connection failed: " . $db->connect_error);
-  }
+  include "Database.php";
+  $db = dbConnect();
 
 
   $sql = "SELECT studentid, name, email

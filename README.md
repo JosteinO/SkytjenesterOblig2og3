@@ -1,12 +1,12 @@
 # SkytjenesterOblig2og3
-Obligatory task 2 and 3 in "nettverk og skytjenester". 
+Obligatory task 2 and 3 in "nettverk og skytjenester".
 This app contains CRUD (Create, Retrieve, Update and Delete) operations.
 
 Note: the studentid you have to use to delete or update needs to exist in the database. Please check retrieveInfo.php for all the available studentids.
 
 http://128.39.121.95:8020/ is the index file, and will lead you to all the other sites.
 
-http://128.39.121.95:8020/createStudent.php is the site where you can create a student. Fill in information and submit to store it in the 
+http://128.39.121.95:8020/createStudent.php is the site where you can create a student. Fill in information and submit to store it in the
 database.
 
 http://128.39.121.95:8020/retrieveInfo.php lists all the information in the database.
